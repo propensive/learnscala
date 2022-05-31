@@ -1,0 +1,158 @@
+{
+  "name": "Collections",
+  "description": "Working with collections of values",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "video": "https://www.youtube.com/embed/X5KQUzoDujY",
+      "prerequisites": [
+        {
+          "reason": "to understand collection classes, we should first understand classes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        },
+        {
+          "reason": "collections are all generic types",
+          "topicId": "types",
+          "lessonId": "generics"
+        }
+      ],
+      "syllabus": [
+        "recognize a collection as a value containing values",
+        "understand how a new immutable collection value may be constructed from an existing one",
+        "be able to access elements by indexing, and understand that all collections are zero-indexed",
+        "be able to define new instances of `Vector`",
+        "append, prepend and combine instances of `Vector` using immutable collection operations"
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "Lists and Sets",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/0_NrC9rK6Pg",
+      "duration": 17,
+      "prerequisites": [
+        {
+          "reason": "there is a subtyping relationship between the types of certain collections",
+          "topicId": "types",
+          "lessonId": "subtyping"
+        },
+        {
+          "reason": "in the lesson we draw an analogy with enumerations",
+          "topicId": "data",
+          "lessonId": "enums2"
+        }
+      ],
+      "syllabus": [
+        "understand that different collection types store values in different structures to optimize different operations",
+        "recognize the names of the most commonly-used Scala collections",
+        "understand that subtyping relationships exist between different collection types",
+        "understand the structure of `List` instances",
+        "be aware of the differences in performance characteristics between common operations on `List`s and `Vector`s",
+        "understand that `Set`s correspond to the mathematical notion of a set",
+        "be able to add and remove elements from a `Set`, and check for existence of a value within a `Set` instance"
+      ]
+    },
+    {
+      "id": "methods",
+      "title": "Iterable Methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "many collection methods use lambdas",
+          "topicId": "foundations",
+          "lessonId": "lambdas"
+        }
+      ],
+      "syllabus": [
+        "know the purpose of the methods, `max`, `maxBy`, `min`, `minBy`, `sortBy`, `sortWith` and `sorted`",
+        "know the purpose of the methods, `foldLeft`, `foldRight` and `reduce`",
+        "know the purpose of the methods, `contains`, `find`, `findLast`, `indexWhere` and `groupBy`",
+        "know the puropes of the methods, `distinct`, `grouped`, `indices`, `distinct`, `tails`, `inits` and `sliding`",
+        "know the purpose of the methods, `collect`, `filter`, `count`, `contains`, `foreach`, `forall`, `exists` and `nonEmpty`",
+        "know the purpose of the methods, `drop`, `dropRight`, `dropWhile`, `take`, `takeRight` and `takeWhile`"
+      ]
+    },
+    {
+      "id": "maps",
+      "title": "Associative Maps",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "for maps to work fast, they need to use hashing",
+          "topicId": "concepts",
+          "lessonId": "hashing"
+        }
+      ],
+      "syllabus": [
+        "understand the primary function of a map datastructure as an association between keys and values",
+        "understand how hashing enables access of map elements in constant time",
+        "be able to construct `Map` instances from sequences of tuples",
+        "be able to implement a map with a default value",
+        "understand how a `Map` implements iterable methods",
+        "know how to use immutable `Map` methods such as `contains`, `keys` and `mapValues`"
+      ]
+    },
+    {
+      "id": "mutable",
+      "title": "Mutable Collections",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we should understand simple variables before mutable collections",
+          "topicId": "foundations",
+          "lessonId": "variables"
+        }
+      ],
+      "syllabus": [
+        "understand how mutable collections can change without copying",
+        "understand how `var`s are used to define mutable collections",
+        "know how to choose between a mutable and an immutable collection",
+        "know when to use `var`s and `val`s to store references to mutable and immutable collections",
+        "understand the consequences of using mutable collections",
+        "be able to convert between mutable and immutable collections"
+      ]
+    },
+    {
+      "id": "lazylists",
+      "title": "Lazy Lists",
+      "authorIds": ["jon-pretty"],
+      "duration": 27,
+      "prerequisites": [
+        {
+          "reason": "understanding by-name parameters is an essential prerequisite",
+          "topicId": "foundations",
+          "lessonId": "byname"
+        },
+        {
+          "reason": "we need to understand blocking to appreciate how lazy lists work",
+          "topicId": "runtime",
+          "lessonId": "blocking"
+        }
+      ],
+      "syllabus": [
+        "understand a `LazyList` as a linked list whose head and tail are evaluated lazily",
+        "recognize a `LazyList` as an immutable data structure",
+        "understand that a `LazyList` may be infinite",
+        "be able to define a `LazyList` recursively",
+        "be aware of how holding a reference to a `LazyList` can lead to memory leaks"
+      ]
+    },
+    {
+      "id": "streams",
+      "title": "Streaming",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true
+    }
+  ]
+}

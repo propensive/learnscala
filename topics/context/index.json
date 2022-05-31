@@ -1,0 +1,145 @@
+{
+  "name": "Context",
+  "description": "Using given context",
+  "lessons": [
+    {
+      "id": "givens",
+      "title": "Given Context",
+      "authorIds": ["jon-pretty"],
+      "duration": 17,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to understand how given context is resolved by its type",
+          "topicId": "types",
+          "lessonId": "hierarchy"
+        }
+      ],
+      "syllabus": [
+        "understand the philosophy of contextual values",
+        "be able to introduce a typed given value into scope",
+        "be able to summon a contextual value by type"
+      ]
+    },
+    {
+      "id": "typeclasses",
+      "title": "Typeclasses",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "typeclasses are implemented using generic types",
+          "topicId": "types",
+          "lessonId": "generics"
+        },
+        {
+          "reason": "SAM syntax will be frequently used when defining typeclass instances",
+          "topicId": "syntax",
+          "lessonId": "sam"
+        }
+      ],
+      "syllabus": [
+        "understand the typical structure of a typeclass as a parameterized trait with a single abstract method",
+        "be able to distinguish between a typeclass definition and a typeclass instance",
+        "be able to define simple given typeclass instances",
+        "understand how typeclasses provide ad-hoc polymorphism",
+        "be aware of the advantages of ad-hoc polymorphism over subtype polymorphism"
+      ]
+    },
+    {
+      "id": "contextbounds",
+      "title": "Context Bounds",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "comingSoon": true,
+      "prerequisites": [],
+      "syllabus": [
+        "be able to specify a context bound on a type parameter for a method or template",
+        "understand how a context bound translates to the type of a contextual value"
+      ]
+    },
+    {
+      "id": "using",
+      "title": "Using Context",
+      "authorIds": ["jon-pretty"],
+      "duration": 9,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to understand the basics of parameters since they are used for \"using\" context",
+          "topicId": "foundations",
+          "lessonId": "params"
+        }
+      ],
+      "syllabus": [
+        "be able to define _using_ parameters by type, with or without a term identifier",
+        "be able to explicitly apply a contextual value to a _using_ parameter"
+      ]
+    },
+    {
+      "id": "resolution",
+      "title": "Given Resolution",
+      "authorIds": ["jon-pretty"],
+      "duration": 17,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "the companion objects of types are fundamental to contextual resolution",
+          "topicId": "templates",
+          "lessonId": "companions"
+        }
+      ],
+      "syllabus": [
+        "understand how enclosing scope and implicit scope are searched, in order, for matching contextual values",
+        "be aware of the criteria for disambiguating between different contextual values when more than one is found",
+        "understand how custom error messages may be provided when a unique contextual value cannot be found"
+      ]
+    },
+    {
+      "id": "extensions",
+      "title": "Extension Methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to extend a type with new methods",
+        "understand that extension methods extend types rather than templates",
+        "be aware that methods defined in the same extension can call each other directly",
+	"know that term members take priority over extension methods"
+      ]
+    },
+    {
+      "id": "contextfunctions",
+      "title": "Context Functions",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to write the function type corresponding to a method taking a _using_ parameter",
+        "know how to use a context function to provide a contextual value to a method parameter"
+      ]
+    },
+    {
+      "id": "typeclasses2",
+      "title": "Advanced Typeclasses",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true
+    },
+    {
+      "id": "derivation",
+      "title": "Typeclass Derivation",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "transparent inline methods are used extensively during typeclass derivation",
+          "topicId": "metaprogramming",
+          "lessonId": "transparent"
+        }
+      ]
+    }
+  ]
+}

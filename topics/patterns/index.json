@@ -1,0 +1,158 @@
+{
+  "name": "Pattern Matching",
+  "description": "Matching and deconstructing values in Scala with Patterns",
+  "lessons": [
+    {
+      "id": "simple",
+      "title": "Simple matching",
+      "authorIds": ["jon-pretty"],
+      "duration": 8,
+      "video": "https://www.youtube.com/embed/rhhkLMfyysA",
+      "prerequisites": [
+        {
+          "reason": "pattern matches are composed of (and are themselves) expressions, so we should understand these first",
+          "topicId": "foundations",
+          "lessonId": "expressions"
+        },
+        {
+          "reason": "our first examples of pattern matching will use enums",
+          "topicId": "data",
+          "lessonId": "enums"
+        }
+      ],
+      "syllabus": [
+        "be able to match by equality against objects",
+        "understand that a match is an expression which returns a value"
+      ]
+    },
+    {
+      "id": "destructuring",
+      "title": "Structural Matching",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/C-PI5HXlPTE",
+      "duration": 14,
+      "syllabus": [
+        "be able to match against structured data such as case classes and enum values",
+        "understand how patterns destructure recursively",
+        "appreciate that the structure of a pattern mirrors the structure of the construction of the same object"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "Pattern Syntax",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/dnSr2Ky3JxY",
+      "duration": 15,
+      "syllabus": [
+        "recognize that the difference between binding and matching is determined by the case of the first letter of the pattern object",
+        "be able to quote identifiers in patterns using backticks",
+        "specify pattern alternatives using alternation syntax",
+        "be aware of the constraints on binding and alternation"
+      ]
+    },
+    {
+      "id": "extractors",
+      "title": "Extractors",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [
+        {
+          "reason": "it is useful to be familiar with matching case class instances in patterns to see how custom extractors may be defined",
+          "topicId": "data",
+          "lessonId": "caseclasses"
+        }
+      ],
+      "syllabus": [
+        "understand how pattern matching translates into method calls",
+        "recognize that pattern matching on structural enums and case classes is provided using extractors",
+        "know the appropriate signature for an extractor",
+        "be able to implement a simple extractor on a companion object"
+      ]
+    },
+    {
+      "id": "collections",
+      "title": "Matching on Collections",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/Mobst4aunLk",
+      "prerequisites": [
+        {
+          "reason": "it would be useful to know a few collections before we try to pattern match on them",
+          "topicId": "collections",
+          "lessonId": "lists"
+        }
+      ],
+      "syllabus": [
+        "be able to use the `::` extractor on `List`s",
+        "be able to use the `:+` and `+:` extractors on sequence types",
+        "understand that infix extractors are ordinary two-parameter extractors",
+        "understand why a `++` extractor does not exist"
+      ]
+    },
+    {
+      "id": "exhaustivity",
+      "title": "Exhaustivity",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "video": "https://www.youtube.com/embed/8t8CQNXgdXo",
+      "prerequisites": [
+        {
+          "reason": "the concept of exhaustivity relies upon understanding totality and partiality",
+          "topicId": "concepts",
+          "lessonId": "totality"
+        },
+        {
+          "reason": "this lesson will explore how exhaustivity applies to union types",
+          "topicId": "types",
+          "lessonId": "unions"
+        }
+      ],
+      "syllabus": [
+        "understand the concept of exhaustivity and its relationship with totality",
+        "recognize that a wildcard match guarantees exhaustivity",
+        "be able to write a guard clause and understand how it affects exhaustivity checking"
+      ]
+    },
+    {
+      "id": "extractors2",
+      "title": "Advanced Extraction",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [
+      ],
+      "syllabus": [
+        "understand what it means for an extractor to be irrefutable",
+        "be able to implement an irrefutable extractor",
+        "understand the alternative ways to implement an extractor"
+      ]
+    },
+    {
+      "id": "gadts",
+      "title": "GADTs",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "GADTs rely on case classes and sealed traits",
+          "topicId": "data",
+          "lessonId": "sealedtraits"
+        }
+      ]
+    },
+    {
+      "id": "matchtypes",
+      "title": "Match Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "a good understanding of types in required in order to match upon them",
+          "topicId": "types",
+          "lessonId": "polykinded"
+        }
+      ]
+    }
+  ]
+}

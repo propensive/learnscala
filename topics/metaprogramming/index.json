@@ -1,0 +1,102 @@
+{
+  "name": "Metaprogramming",
+  "description": "Metaprogramming in Scala",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "this lesson needs a good understanding of the foundations of Scala",
+          "topicId": "foundations",
+          "lessonId": "scopes"
+        },
+        {
+          "reason": "some basic understanding of programming concepts are necessary",
+          "topicId": "concepts",
+          "lessonId": "reftrans"
+        }
+      ]
+    },
+    {
+      "id": "inlines",
+      "title": "Inlining methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true
+    },
+    {
+      "id": "asts",
+      "title": "Abstract Syntax Trees",
+      "authorIds": ["jon-pretty"],
+      "duration": 23,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "metaprogrammers need to understand how the Scala compiler reads code",
+          "topicId": "syntax",
+          "lessonId": "parsing"
+        }
+      ]
+    },
+    {
+      "id": "macros",
+      "title": "Macros",
+      "authorIds": ["jon-pretty"],
+      "duration": 23,
+      "comingSoon": true
+    },
+    {
+      "id": "quotes",
+      "title": "Quotes and Splices",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we cannot use quotes and splices without understanding context",
+          "topicId": "context",
+          "lessonId": "using"
+        }
+      ]
+    },
+    {
+      "id": "phases",
+      "title": "Phase Consistency",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true
+    },
+    {
+      "id": "typereprs",
+      "title": "Types and their Representation",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "a full understanding of Scala's types is a prerequisite to understanding their representation",
+          "topicId": "types",
+          "lessonId": "polykinded"
+        }
+      ]
+    },
+    {
+      "id": "transparent",
+      "title": "Transparent Inlining",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true
+    },
+    {
+      "id": "staging",
+      "title": "Staging",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true
+    }
+  ]
+}

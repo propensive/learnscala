@@ -1,0 +1,128 @@
+{
+  "name": "The Runtime",
+  "description": "The JVM runtime environment",
+  "lessons": [
+    {
+      "id": "jvm",
+      "title": "The JVM",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/6xe4bmJF-JM",
+      "prerequisites": [
+        {
+          "reason": "it helps to see at least one working programming before exploring the JVM",
+          "topicId": "foundations",
+          "lessonId": "helloworld"
+        }
+      ],
+      "syllabus": [
+        "understand the JVM as a virtual model of a machine with consistent behavior on different hardware",
+        "be able to distinguish between an instance of the JVM and the JVM Specification, from context",
+        "understand Java bytecode as the primary form of input to the JVM, but distinct from source code",
+        "be aware of `javap` as a tool for displaying Java bytecode in a readable format"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "The Memory Model",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "video": "https://www.youtube.com/embed/kA4CtzUoCvU",
+      "prerequisites": [
+        {
+          "reason": "Java's memory stores objects, so we need to understand them first",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "be aware of the heap and the stack as distinct areas of memory",
+        "know that objects are allocated on the heap",
+        "be aware that bytecode operates using addresses to objects stored on the heap, but whose numerical value is concealed",
+        "understand the cleanup of unused objects by garbage collection",
+        "recognize that garbage is typically unpredictable and may cause execution pauses",
+        "be aware of the names of different regions of memory accessible on the JVM"
+      ]
+    },
+    {
+      "id": "stack",
+      "title": "The Execution Stack",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "video": "https://www.youtube.com/embed/es68rZbORoc",
+      "prerequisites": [
+        {
+          "reason": "the stack contains references to methods in classes, so we should understand classes first",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "know the stack as a FILO data structure which keeps track of the execution of code",
+        "recognize popping and pushing as the two basic operations on a stack",
+        "understand the basic mechanism for continuing execution after a method returns",
+        "be aware that a method may either return normally or throw an exception",
+        "recognize and be able to interpret a stack trace"
+      ]
+    },
+    {
+      "id": "blocking",
+      "title": "Blocking",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "understand the concept of blocking during execution",
+        "appreciate why blocking is often undesirable",
+        "understand the terms _I/O-bound_ and _CPU-bound_"
+      ]
+    },
+    {
+      "id": "threads",
+      "title": "Threads",
+      "video": "https://www.youtube.com/embed/0OYNrUtc_vA",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [
+        {
+          "reason": "we will be defining threads by inheritance, so this must be understood first",
+          "topicId": "templates",
+          "lessonId": "inheritance"
+        }
+      ],
+      "syllabus": [
+        "understand threading as a model for appearing to do multiple operations independently",
+        "recognize that threads provide independence but not isolation",
+        "understand the concept of synchronization, and be able to synchronize on an object",
+        "be aware of the risks of deadlock"
+      ]
+    },
+    {
+      "id": "erasure",
+      "title": "Type Erasure",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [
+        {
+          "reason": "generics are a typical feature of Scala's type system that is affected by the limitations of erasure",
+          "topicId": "types",
+          "lessonId": "generics"
+        }
+      ],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the limitations of modeling static types at runtime",
+        "recognize the concept of erasure in approximating compiletime types",
+        "be able to identify types which erase to the same runtime type"
+      ]
+    },
+    {
+      "id": "decompilation",
+      "title": "Decompilation",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true
+    }
+  ]
+}

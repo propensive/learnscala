@@ -1,0 +1,205 @@
+{
+  "name": "Programming Concepts",
+  "description": "General concepts of programming and computer science",
+  "lessons": [
+    {
+      "id": "static",
+      "title": "Static vs Dynamic",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/eupgcKTO6AY",
+      "duration": 10,
+      "prerequisites": [
+        {
+          "reason": "this is a good topic to start with",
+          "topicId": "foundations",
+          "lessonId": "introduction"
+        }
+      ],
+      "syllabus": [
+        "understand the difference between the terms \"static\" and \"dynamic\"",
+        "be aware of what information is available at runtime and compiletime",
+        "understand the concept of typesafety and the guarantees it provides",
+        "understand the meaning of \"correctness\"",
+        "be aware of the limitations of types and of tests to show correctness"
+      ]
+    },
+    {
+      "id": "floatingpoint",
+      "title": "Floating-Point Numbers",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "prerequisites": [],
+      "syllabus": [
+        "understand the difference between the mathematical concept of real numbers and floating-point numbers",
+        "know the primitive types which represent floating-point numbers on the JVM",
+        "make good choices about when to use floating-point numbers and when to use integers",
+        "understand the meaning of the \"mantissa\" and \"exponent\" parts of a floating-point number",
+        "recognize when the numbers, `Infinity`, `-Infinity`, `-0.0` and `NaN` arise",
+        "understand the properties of `Infinity`, `-Infinity`, `-0.0` (vs `0.0`) and `NaN`",
+        "understand how the size of a floating-point number's mantissa and exponent influence its range",
+        "understand the difference between accuracy and precision",
+        "be aware that floating-point operations may be accurate, precise, both, or neither"
+      ]
+    },
+    {
+      "id": "hashing",
+      "title": "Hashing",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "video": "https://www.youtube.com/embed/p1qh7HoXxOA",
+      "prerequisites": [
+        {
+          "reason": "some of the examples in this lesson need an understanding of classes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "understand a hash as a one-way function",
+        "recognize the domain and range of a hash function",
+        "recognize common uses of hash functions",
+        "understand how hash functions are used in hashmaps",
+        "understand collisions and the properties of a good hash function",
+        "be aware of the distinction between cryptographic and non-cryptographic hash functions",
+        "understand the `hashCode` method and its properties with respect to the `equals` method"
+      ]
+    },
+    {
+      "id": "encodings",
+      "title": "Character Encodings",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "video": "https://www.youtube.com/embed/hI3m7q6ZwnM",
+      "prerequisites": [
+        {
+          "reason": "we first need to know how strings work in Scala",
+          "topicId": "foundations",
+          "lessonId": "strings"
+        }
+      ],
+      "syllabus": [
+        "understand that `String`s are stored in memory as binary",
+        "be aware of the necessity of character encodings to convert between binary and character data",
+        "understand that many different character encodings exist",
+        "be aware of the `UTF-8`, `ASCII` and `ISO-8859-1` encodings",
+        "understand what the Unicode standard represents",
+        "be aware of the different codepage sizes of `UTF-8`, `ASCII` and `ISO-8859-1`",
+        "understand the byte-length of characters in `UTF-8`, `ASCII` and `ISO-8859-1`",
+        "know the difference between Unicode and `UTF-8`",
+        "recognize badly-encoded text, and make educated guesses about encoding mismatches"
+      ]
+    },
+    {
+      "id": "recursion",
+      "title": "Recursion",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "prerequisites": [
+        {
+          "reason": "Lists are the prototypical recursive data structure used in most examples",
+          "topicId": "collections",
+          "lessonId": "lists"
+        }
+      ],
+      "comingSoon": true,
+      "syllabus": [
+        "understand what it means for a method to be recursive",
+        "know that recursive methods must have declared return types",
+        "understand recursive methods in terms of a base case and an induction step",
+        "understand the risks of stack overflow from recursive methods",
+        "be aware of mutual recursion between two or more methods"
+      ]
+    },
+    {
+      "id": "reftrans",
+      "title": "Referential Transparency",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the concept of referential transparency and its benefits",
+        "be aware of the Scala convention for indicating that a parameterless method is side-effecting"
+      ]
+    },
+    {
+      "id": "binary",
+      "title": "Binary",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand how integers are represented in binary",
+        "know how to calculate a decimal number from its binary representation",
+        "understand how _two's complement_ can be used to represent negative numbers",
+        "be able to use the binary bitwise operators, `|`, `&`, `^` and unary operator `~`",
+        "be able to use the shift operators, `<<`, `>>` and `>>>`",
+        "be aware of the difference between the `>>` and `>>>` operators"
+      ]
+    },
+    {
+      "id": "hex",
+      "title": "Hexadecimal Numbers",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand hexadecimal numbers as a base-16 number system",
+        "recognize the suitability of hexadecimal for representing numbers on computers",
+        "be able to convert a hexadecimal number to its decimal representation"
+      ]
+    },
+    {
+      "id": "tailrec",
+      "title": "Tail Recursion",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand what tail recursion is and why it is desirable",
+        "know how to identify whether a method definition is tail recursive or not",
+        "be able to transform a simple non-tail-recursive method into a tail-recursive one",
+        "be able to use the `@tailrec` annotation on methods",
+        "understand that the `@tailrec` annotation _checks_ (rather than _changes_) behavior"
+      ]
+    },
+    {
+      "id": "totality",
+      "title": "Totality and Partiality",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the difference between a partial and a total method",
+        "know how total and partial functions are represented",
+        "understand the JVM's limitations in representing total functions"
+      ]
+    },
+    {
+      "id": "complexity",
+      "title": "Computational Complexity",
+      "authorIds": ["jon-pretty"],
+      "duration": 28,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "operations on collections provide many examples where computational complexity is important",
+          "topicId": "collections",
+          "lessonId": "methods"
+        },
+        {
+          "reason": "we should see how complexity arises from the desugaring of for comprehensions",
+          "topicId": "fors",
+          "lessonId": "transformation"
+        }
+      ],
+      "syllabus": [
+
+      ]
+    }
+  ]
+}

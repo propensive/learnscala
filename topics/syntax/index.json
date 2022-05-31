@@ -1,0 +1,99 @@
+{
+  "name": "Syntax",
+  "description": "The syntax of Scala code",
+  "lessons": [
+    {
+      "id": "whitespace",
+      "title": "Meaningful Whitespace",
+      "authorIds": ["jon-pretty"],
+      "duration": 17,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "Scala's whitespace syntax makes most sense after we have written our first program",
+          "topicId": "foundations",
+          "lessonId": "helloworld"
+        }
+      ],
+      "syllabus": [
+        "understand the significance of whitespace in Scala source code",
+        "understand how whitespace may be used to delimit scopes, and its equivalence to braces"
+      ]
+    },
+    {
+      "id": "keywords",
+      "title": "Scala Keywords",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "syllabus": [
+        "recognize every Scala keyword",
+        "be aware of soft keywords and how they differ from other keywords",
+        "know how to use a Scala keyword as an identifier"
+      ]
+    },
+    {
+      "id": "blocks",
+      "title": "Code blocks",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "it is good to see a real example of how code blocks are used first",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "understand a block as a sequence of declarations and statements",
+        "be aware of where order is and is not significant",
+        "understand the relationship between blocks and scopes"
+      ]
+    },
+    {
+      "id": "sugar",
+      "title": "Syntactic Sugar",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "syllabus": [
+        "understand the concept of syntactic sugar",
+        "know how application and applied assignment translate into `apply` and `update` method calls",
+        "recognize setter methods",
+        "know how unary prefix operators transform into method calls",
+        "know the shorthand for mutating a variable with an existing binary symbolic operator",
+        "understand that different desugarings may be applied orthogonally"
+      ]
+    },
+    {
+      "id": "dynamic",
+      "title": "Dynamic Objects",
+      "authorIds": ["jon-pretty"],
+      "duration": 27,
+      "syllabus": [
+        "know how the `Dynamic` trait can be used to allow arbitrarily-named selections on objects",
+        "understand how different patterns of selection and application on a `Dynamic` object translate into static method invocations",
+        "know that static methods defined on a `Dynamic` object will always be selected in preference to dynamic invocations"
+      ]
+    },
+    {
+      "id": "sam",
+      "title": "Single Abstract Method Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to recognize a single-abstract-method (SAM) type",
+        "know the lightweight syntax for implementing a SAM type"
+      ]
+    },
+    {
+      "id": "parsing",
+      "title": "Parsing",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true,
+      "syllabus": []
+    }
+  ]
+}

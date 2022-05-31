@@ -1,0 +1,151 @@
+{
+  "name": "Templates",
+  "description": "Classes, traits, objects and their creation",
+  "lessons": [
+    {
+      "id": "objects",
+      "title": "Objects",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/72l8Kmwhlk4",
+      "duration": 11,
+      "prerequisites": [
+        {
+          "reason": "we will need to create some definitions within objects",
+          "topicId": "foundations",
+          "lessonId": "defs"
+        },
+        {
+          "reason": "every object has a type, and  basic understanding of types is useful",
+          "topicId": "types",
+          "lessonId": "basics"
+        }
+      ],
+      "syllabus": [
+        "understand an object as a singleton instance of a reference type",
+        "be able to define an object with state, and access its member values and methods",
+        "understand the concept of encapsulation for bundling state with methods that operate on that state",
+        "understand that an object's identifier corresponds to an opaque reference to the object in memory",
+        "know that objects are instantiated lazily",
+        "know that the object's body is executed when the object is instantiated"
+      ]
+    },
+    {
+      "id": "classes",
+      "title": "Classes",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/LQtROAUWfYU",
+      "syllabus": [
+        "understand a class as a template from which many related object instances may be constructed",
+        "be able to define a class which takes constructor parameters, and use those parameters in the class body",
+        "be able to construct a new class instance by calling its constructor",
+        "understand how a class definition gives rise to a corresponding type",
+        "understand the concept of inheritance"
+      ]
+    },
+    {
+      "id": "traits",
+      "title": "Traits",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "video": "https://www.youtube.com/embed/hrT33GtAP_A",
+      "prerequisites": [
+        {
+          "reason": "inheritance from traits requires an understanding of subtyping",
+          "topicId": "types",
+          "lessonId": "subtyping"
+        }
+      ],
+      "syllabus": [
+        "recognize traits as a way to define multiple inheritance between different types",
+        "understand multiple inheritance as the union of inherited properties",
+        "understand method signatures and be able to define abstract methods",
+        "know that all abstract methods must be implemented to instantiate a class or trait",
+        "be able to use the `abstract` modifier for classes, and know when it is required"
+      ]
+    },
+    {
+      "id": "inheritance",
+      "title": "Inheritance",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "video": "https://www.youtube.com/embed/5uAkpxI-GUk",
+      "prerequisites": [],
+      "syllabus": [
+        "understand the constraints on trait inheritance",
+        "know that constructor parameters are private to the trait body",
+        "understand the initialization order of inherited traits"
+      ]
+    },
+    {
+      "id": "overriding",
+      "title": "Overriding",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "be able to redefine inherited methods using the `override` modifier",
+        "understand the motivation for the `override` modifier",
+        "know that an overridden method may have a more precise return type"
+      ]
+    },
+    {
+      "id": "companions",
+      "title": "Companion Objects",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "know that templates have companion objects, and how they are named",
+        "recognize the privileges that companion objects have for their associated template",
+        "recognize companion objects as a place to define factory methods"
+      ]
+    },
+    {
+      "id": "overloading",
+      "title": "Overloading and Resolution",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the difference between overriding and overloading",
+        "understand how overloaded methods are resolved",
+        "understand when ambiguous overloads can occur"
+      ]
+    },
+    {
+      "id": "variances",
+      "title": "Declaring Variance",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to first understand how variance affects the subtyping relationship between types",
+          "topicId": "types",
+          "lessonId": "variance"
+        }
+      ],
+      "syllabus": [
+        "know how to annotate a template's type parameter with `+` or `-` to indicate its variance",
+        "understand how the uses of type parameters constrain their possible variance"
+      ]
+    },
+    {
+      "id": "selftypes",
+      "title": "Self-types",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "recognize the syntax for declaring a self-type constraint on a class or trait",
+        "be able to use self-type syntax, without a type, to alias `this`",
+        "understand the constraints that a self-type places on a where a trait can be mixed-in"
+      ]
+    }
+  ]
+}

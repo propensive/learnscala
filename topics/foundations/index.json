@@ -1,0 +1,277 @@
+{
+  "name": "Foundations",
+  "description": "Fundamental topics for learning to program in Scala",
+  "lessons": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/FvYS8r9Nt18",
+      "duration": 9,
+      "syllabus": []
+    },
+    {
+      "id": "running",
+      "title": "Installing and Running Scala",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "comingSoon": true,
+      "syllabus": [
+        "understand how the `scalac` command compiles source code to Java bytecode",
+        "understand how the `scala` command may be used to run a Scala program",
+        "be able to launch the REPL using the `scala` command"
+      ]
+    },
+    {
+      "id": "expressions",
+      "title": "Expressions and Statements",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/fKCrvlBGbow",
+      "duration": 14,
+      "syllabus": [
+        "understand what an expression is",
+        "understand a statement as an expression which returns `Unit`",
+        "understand that expressions compose",
+        "understand purity and side-effects",
+        "be aware that an expression can either return normally or throw an exception"
+      ]
+    },
+    {
+      "id": "helloworld",
+      "title": "Our First Program",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/KOz_53LlAMI",
+      "duration": 12,
+      "syllabus": [
+        "understand the concept of an _entry point_ and be able to define a `main` method",
+        "recognize that different environments may have different entry points",
+        "be able to write the \"Hello World\" program in Scala"
+      ]
+    },
+    {
+      "id": "defs",
+      "title": "Definitions",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/KLlAcPIUBKs",
+      "duration": 15,
+      "prerequisites": [
+        {
+          "reason": "all value definitions will have a type, so we need a basic intuition for types first",
+          "topicId": "types",
+          "lessonId": "basics"
+        }
+      ],
+      "syllabus": [
+        "understand `def` as the means of defining a new named method",
+        "be able to specify parameters on a method",
+        "know that methods may be pure or side-effecting",
+        "understand the role of the return type in a method definition",
+        "understand methods as reusable code",
+        "understand the differences between a `val` and a `def` definition"
+      ]
+    },
+    {
+      "id": "strings",
+      "title": "Strings",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/DeG6wmkCou0",
+      "duration": 22,
+      "prerequisites": [],
+      "syllabus": [
+        "understand the `String` type as a representation of a series of characters",
+        "know that strings in Scala are immutable",
+        "understand that `String`s always represent Unicode characters",
+        "know how to escape special characters in `String` literals",
+        "be able to write `Char` literals",
+        "be able to write triple-quoted string literals, and understand the differences in escaping",
+        "be able to write interpolated strings with value substitutions"
+      ]
+    },
+    {
+      "id": "arithmetic",
+      "title": "Arithmetic",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/nAV4Qd9glWY",
+      "duration": 15,
+      "prerequisites": [],
+      "syllabus": [
+        "understand the number types to which standard arithmetic operations apply",
+        "recognize that different binary operators have different precedence",
+        "know the precedence order for binary operators which commonly appear together in boolean expressions",
+        "know the precedence order for binary operators which commonly appear together in numerical expressions",
+        "understand how parentheses affect evaluation order",
+        "know that operators whose names end in a colon are right-associative",
+        "recognize that arithmetic operations between numeric types may return a value of a different type",
+        "be aware of the concept of constant folding when evaluating static arithmetic"
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "Functions",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [
+        {
+          "reason": "this lesson explains how functions are objects, but we need to understand objects first",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "understand the concept of functions as values",
+        "know the difference between functions and methods",
+        "know how to write the types of functions using the `=>` type operator",
+        "understand what is encapsulated in a function's type, and what is not"
+      ]
+    },
+    {
+      "id": "lambdas",
+      "title": "Lambdas",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "video": "https://www.youtube.com/embed/IMeiRxmQJss",
+      "prerequisites": [
+        {
+          "reason": "some of the advanced topics in this lesson make reference to the JVM's memory model",
+          "topicId": "runtime",
+          "lessonId": "memory"
+        }
+      ],
+      "syllabus": [
+        "understand a lambda as an anonymous function literal",
+        "be able to write lambdas with one or more parameters",
+        "understand the concept of variable capture",
+        "be able to read and write lambdas using lightweight underscore syntax, for one or more parameters"
+      ]
+    },
+    {
+      "id": "scopes",
+      "title": "Scopes and Namespaces",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/IOnttJYoj_4",
+      "duration": 9,
+      "prerequisites": [
+        {
+          "reason": "classes are one of the primary constructs which give rise to scopes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "understand the requirement that identifiers in source code must be uniquely resolved to their definitions",
+        "understand the concept of nested scopes",
+        "be aware of type and term namespaces",
+        "be aware of shadowing"
+      ]
+    },
+    {
+      "id": "primitives",
+      "title": "Primitives",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "recognize the eight primitive types",
+        "know how many bits are used to represent each primitive type",
+        "know the four integral primitive types and how to calculate the range of numbers that can be expressed by each",
+        "know the two floating-point primitive types",
+        "understand how primitive types are stored in memory in contrast to reference types",
+        "know that the primitive types are all subtypes of `AnyVal`"
+      ]
+    },
+    {
+      "id": "variables",
+      "title": "Variables",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "be able to define a new variable using the `var` keyword, and reassign values to it",
+        "be aware of the differences between local variables and class fields",
+        "understand the risks of using mutable state"
+      ]
+    },
+    {
+      "id": "varargs",
+      "title": "Repeated Parameters",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "this lesson will build upon case class definitions",
+          "topicId": "data",
+          "lessonId": "caseclasses"
+        },
+        {
+          "reason": "extracting repeated parameters requires an understanding of extracting non-repeated parameters first",
+          "topicId": "patterns",
+          "lessonId": "extractors"
+        }
+      ],
+      "syllabus": [
+        "be able to define a method which takes repeated parameters",
+        "be able to pass a sequence of values to a method in variadic parameter position",
+        "understand the limitations of mixing sequences and individual parameters to variadic methods",
+        "be able to define a case class with repeated parameters",
+        "be able to pattern match on a variadic case class or extractor"
+      ]
+    },
+    {
+      "id": "params",
+      "title": "Named and Default Parameters",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand that methods and templates may have default parameter values",
+        "apply parameters to a method positionally and nominally",
+        "understand the constraints on calling method parameters nominally"
+      ]
+    },
+    {
+      "id": "byname",
+      "title": "Advanced Parameters",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "be able to define _by-name_ method and template parameters",
+        "be able to define template parameters as fields using `val`",
+        "be able to define parameters in more than one parameter block",
+        "understand partial application"
+      ]
+    },
+    {
+      "id": "tuples",
+      "title": "Tuples",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "recognize tuples as anonymous product types",
+        "be able to access indexed tuple elements"
+      ]
+    },
+    {
+      "id": "hlists",
+      "title": "Heterogeneous Lists",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "Match types are useful for decomposing the types of HLists",
+          "topicId": "patterns",
+          "lessonId": "matchtypes"
+        }
+      ],
+      "syllabus":[]
+    }
+  ]
+}

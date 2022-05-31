@@ -1,0 +1,282 @@
+{
+  "name": "Types",
+  "description": "All about Scala's Type System",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/G2oyqW8VyqM",
+      "duration": 12,
+      "prerequisites": [
+        {
+          "reason": "we should know how a trivial program works before exploring types",
+          "topicId": "foundations",
+          "lessonId": "helloworld"
+        },
+        {
+          "reason": "types are a static concept, and we should be clear about the distinction between runtime and compiletime",
+          "topicId": "concepts",
+          "lessonId": "static"
+        }
+      ],
+      "syllabus": [
+        "understand a type as an encoding of constraints on a value",
+        "be aware that all values have types, and that types may be inferred",
+        "understand the concept of a property as an abstract, provable fact about a value, known to the compiler",
+        "understand the `#` notation for referring to members of a type",
+        "understand that a type is conferred on a value by virtue of it being constructed by a template of the same name",
+        "know that the namespaces of types and terms are distinct",
+        "be able to recognize types in Scala source code, just from their context",
+        "understand that Scala's type system is _nominal_ and not _structural_"
+      ]
+    },
+    {
+      "id": "subtyping",
+      "title": "Subtyping",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/wfTM_0sxqsA",
+      "prerequisites": [
+        {
+          "reason": "subtyping requires a basic understanding of classes to provide context",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "understand that a subtype relationship implies a subset of instances _or_ a superset of properties",
+        "know that a supertype relationship is the reverse of a subtype relationship",
+        "understand the _Liskov Substitution Principle_, and the concept of _conformance_",
+        "recognize how the _Principle of Least Power_ applies to types that are declared and used",
+        "see that types can be perceived as algebraic sets of instances or sets of properties"
+      ]
+    },
+    {
+      "id": "casting",
+      "title": "Casting",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/Z_RUJ9ApUzI",
+      "duration": 14,
+      "syllabus": [
+        "understand how type ascription can safely upcast a value to a less precise type",
+        "be able to downcast values using `asInstanceOf`",
+        "recognize that downcasting circumvents the type system and is inherently unsafe",
+        "know that a `ClassCastException` can be thrown by a downcast",
+        "be aware that downcasting changes a value's static type, not its runtime type"
+      ]
+    },
+    {
+      "id": "hierarchy",
+      "title": "The Type Hierarchy",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "video": "https://www.youtube.com/embed/AYvkAHqHEzk",
+      "syllabus": [
+        "be able to read type hierarchy diagrams as models of the relationships between types",
+        "understand that a type hierarchy diagram can only show a subset of types",
+        "be able to place the types, `Any`, `AnyRef`, `AnyVal`, `Nothing` and `Null` on a Universal type hierarchy diagram",
+        "recognize that every value is either an `AnyRef` or an `AnyVal`",
+        "understand the types `Nothing` and `Null` as subtypes of _everything_"
+      ]
+    },
+    {
+      "id": "generics",
+      "title": "Generic Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "video": "https://www.youtube.com/embed/rqovDkKmGP8",
+      "syllabus": [
+        "understand that types may take parameters, and are called _generic types_",
+        "know that the properties of a generic type may be defined in terms of its type parameter",
+        "be aware that subtyping relationships between generic types depend on variance"
+      ]
+    },
+    {
+      "id": "wildcards",
+      "title": "Wildcard Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "video": "https://www.youtube.com/embed/20RRooLvzRs",
+      "prerequisites": [
+        {
+          "reason": "wildcards often arise as a consequence of type erasure",
+          "topicId": "runtime",
+          "lessonId": "erasure"
+        }
+      ],
+      "syllabus": [
+        "know how to recognize and write wildcard types",
+        "understand wildcard types as generic types whose parameter has not been specified",
+        "understand how different properties of a wildcard type can be interpreted",
+        "recognize the uses of wildcard types as generic types whose parameter is not important, known or consistent"
+      ]
+    },
+    {
+      "id": "unions",
+      "title": "Union types",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "comingSoon": true,
+      "syllabus": [
+        "understand a union type as a type representing one from a set of alternative types",
+        "equate a union type to a \"sum\" or \"coproduct\" type",
+        "be able to use pattern matching to branch on an instance of a union type",
+        "be aware that union types rely on the erased types of their alternatives being distinct",
+        "recognize that the order and plurality of the alternatives in union type are not significant",
+        "understand the subsumption of types within a union",
+        "be able to simplify union types, where possible",
+        "be able to identify the join of a union type"
+      ]
+    },
+    {
+      "id": "intersections",
+      "title": "Intersection types",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "prerequisites": [
+        {
+          "reason": "intersection types often arise as a consequence of inheritance",
+          "topicId": "templates",
+          "lessonId": "inheritance"
+        }
+      ],
+      "syllabus": [
+        "understand an intersection type as a type representing the union of the properties of its parts",
+        "recognize the similarities between intersection types and product types",
+        "recognize that the order and plurality of the parts of an intersection type are not significant",
+        "understand the subsumption of types within a intersection",
+        "be able to simplify intersection types, where possible"
+      ]
+    },
+    {
+      "id": "aliases",
+      "title": "Type aliases",
+      "authorIds": ["jon-pretty"],
+      "duration": 9,
+      "comingSoon": true,
+      "syllabus": [
+        "recognize a type alias as an alternative name for another type",
+        "be able to define type aliases, including parameterized type aliases",
+        "understand what it means to dealias a type alias"
+      ]
+    },
+    {
+      "id": "members",
+      "title": "Type members",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "type members are scoped type aliases so we need to first understand scopes",
+          "topicId": "foundations",
+          "lessonId": "scopes"
+        }
+      ],
+      "syllabus": [
+        "recognize a type member as a type alias within a particular scope",
+        "understand when a type member may be dealiased, and when it cannot",
+        "understand how to reference a type with a concrete type member",
+        "know the similarities and differences between type parameters and type members",
+        "understand how to refactor between type members and type parameters, at both the call site and the definition site"
+      ]
+    },
+    {
+      "id": "variance",
+      "title": "Variance",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true,
+      "syllabus": [
+        "understand that variance establishes the subtyping relationship between generic types",
+        "be aware of covariance and invariance",
+        "understand how covariance changes the interpretation of a type parameter as a bound rather than an exact type",
+        "be able to specify a type parameter as covariant",
+        "understand the constraints that covariance places on the usage of type parameters within a template",
+        "be able to recognize whether a particular type parameter of a template may be declared covariant or not"
+      ]
+    },
+    {
+      "id": "contravariance",
+      "title": "Contravariance",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true,
+      "syllabus": [
+        "understand the subtyping relationship between different instances of a generic type with a contravariant type parameter",
+        "understand how contravariance changes the interpretation of a type parameter as a bound rather than an exact type",
+        "understand the constraints that contravariance places on the usage of a type parameter within a template",
+        "be able to recognize whether a particular type parameter of a template may be declared contravariant or not"
+    ]
+    },
+    {
+      "id": "stability",
+      "title": "Value Stability",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "understand what it means for an identifier to be stable",
+        "know the requirements for an identifier to be considered stable",
+        "know which syntactic constructs introduce stable and unstable identifiers"
+      ]
+    },
+    {
+      "id": "singletons",
+      "title": "Singleton Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "syllabus": [
+        "understand singleton types as types with exactly one instance",
+        "be aware of the requirement that reference singleton types only exist for stable identifiers",
+        "be able to use singleton literal types"
+      ]
+    },
+    {
+      "id": "pathdependent",
+      "title": "Path-dependent types",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "syllabus": [
+        "understand a path-dependent type as an opaque reference to a type member of a stable value",
+        "be aware of when a path-dependent type may and may not be dealiased to a concrete type"
+      ]
+    },
+    {
+      "id": "projections",
+      "title": "Projection types",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "comingSoon": true,
+      "syllabus": [
+        "understand projection types as a generalization of path-dependent types whose paths have a common type",
+        "be aware of the limitations of projection type in representing a path-dependent type's properties",
+        "know how to safely downcast a projection type to a path-dependent type",
+        "be able to write a projection type using the `#` operator"
+      ]
+    },
+    {
+      "id": "dependentmethods",
+      "title": "Dependent Methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "comingSoon": true,
+      "syllabus": [
+        "understand a dependent method type as a function type whose return type is dependent on one of its input types",
+        "be able to define a dependent method using a return type that is dependent on a parameter",
+        "understand how an expression involving a dependent method type is typed at a use site",
+        "be able to express the type of a function corresponding to a dependent method"
+      ]
+    },
+    {
+      "id": "polykinded",
+      "title": "Kind Polymorphism",
+      "authorIds": ["jon-pretty"],
+      "duration": 24,
+      "syllabus": []
+    }
+  ]
+}

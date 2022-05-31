@@ -1,0 +1,61 @@
+{
+  "name": "Scala for beginners",
+  "description": "Scala for Beginners",
+  "ranges": [
+    {
+      "topicId": "foundations",
+      "lessonStart": "introduction",
+      "lessonEnd": "tuples"
+    },
+    {
+      "topicId": "concepts",
+      "lessonStart": "static",
+      "lessonEnd": "reftrans"
+    },
+    {
+      "topicId": "templates",
+      "lessonStart": "objects",
+      "lessonEnd": "overriding"
+    },
+    {
+      "topicId": "context",
+      "lessonStart": "givens",
+      "lessonEnd": "using"
+    },
+    {
+      "topicId": "types",
+      "lessonStart": "basics",
+      "lessonEnd": "intersections"
+    },
+    {
+      "topicId": "patterns",
+      "lessonStart": "simple",
+      "lessonEnd": "exhaustivity"
+    },
+    {
+      "topicId": "collections",
+      "lessonStart": "basics",
+      "lessonEnd": "maps"
+    },
+    {
+      "topicId": "data",
+      "lessonStart": "enums",
+      "lessonEnd": "equality"
+    },
+    {
+      "topicId": "runtime",
+      "lessonStart": "jvm",
+      "lessonEnd": "threads"
+    },
+    {
+      "topicId": "fors",
+      "lessonStart": "options",
+      "lessonEnd": "monads"
+    },
+    {
+      "topicId": "syntax",
+      "lessonStart": "underscore",
+      "lessonEnd": "sugar"
+    }
+  ]
+}

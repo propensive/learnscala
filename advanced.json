@@ -1,0 +1,66 @@
+{
+  "name": "Advanced Scala",
+  "description": "Further topics in Scala for established developers",
+  "ranges": [
+    {
+      "topicId": "types",
+      "lessonStart": "dependentmethods",
+      "lessonEnd": "polykinded"
+    },
+    {
+      "topicId": "patterns",
+      "lessonStart": "collections",
+      "lessonEnd": "matchtypes"
+    },
+    {
+      "topicId": "templates",
+      "lessonStart": "overloading",
+      "lessonEnd": "selftypes"
+    },
+    {
+      "topicId": "runtime",
+      "lessonStart": "erasure",
+      "lessonEnd": "decompilation"
+    },
+    {
+      "topicId": "foundations",
+      "lessonStart": "hlists",
+      "lessonEnd": "hlists"
+    },
+    {
+      "topicId": "collections",
+      "lessonStart": "lazylists",
+      "lessonEnd": "streams"
+    },
+    {
+      "topicId": "data",
+      "lessonStart": "stringcontext",
+      "lessonEnd": "stringcontext"
+    },
+    {
+      "topicId": "context",
+      "lessonStart": "resolution",
+      "lessonEnd": "derivation"
+    },
+    {
+      "topicId": "concepts",
+      "lessonStart": "tailrec",
+      "lessonEnd": "complexity"
+    },
+    {
+      "topicId": "fors",
+      "lessonStart": "monads",
+      "lessonEnd": "laws"
+    },
+    {
+      "topicId": "metaprogramming",
+      "lessonStart": "basics",
+      "lessonEnd": "staging"
+    },
+    {
+      "topicId": "syntax",
+      "lessonStart": "dynamic",
+      "lessonEnd": "parsing"
+    }
+  ]
+}

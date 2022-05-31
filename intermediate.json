@@ -1,0 +1,66 @@
+{
+  "name": "Intermediate Scala",
+  "description": "Scala for developers who already have some experience",
+  "ranges": [
+    {
+      "topicId": "types",
+      "lessonStart": "casting",
+      "lessonEnd": "dependentmethods"
+    },
+    {
+      "topicId": "patterns",
+      "lessonStart": "collections",
+      "lessonEnd": "exhaustivity"
+    },
+    {
+      "topicId": "foundations",
+      "lessonStart": "lambdas",
+      "lessonEnd": "byname"
+    },
+    {
+      "topicId": "templates",
+      "lessonStart": "traits",
+      "lessonEnd": "variances"
+    },
+    {
+      "topicId": "runtime",
+      "lessonStart": "stack",
+      "lessonEnd": "erasure"
+    },
+    {
+      "topicId": "collections",
+      "lessonStart": "methods",
+      "lessonEnd": "lazylists"
+    },
+    {
+      "topicId": "data",
+      "lessonStart": "enums2",
+      "lessonEnd": "equality"
+    },
+    {
+      "topicId": "context",
+      "lessonStart": "givens",
+      "lessonEnd": "extensions"
+    },
+    {
+      "topicId": "concepts",
+      "lessonStart": "floatingpoint",
+      "lessonEnd": "complexity"
+    },
+    {
+      "topicId": "fors",
+      "lessonStart": "monads",
+      "lessonEnd": "transformation"
+    },
+    {
+      "topicId": "metaprogramming",
+      "lessonStart": "basics",
+      "lessonEnd": "inlines"
+    },
+    {
+      "topicId": "syntax",
+      "lessonStart": "sugar",
+      "lessonEnd": "dynamic"
+    }
+  ]
+}

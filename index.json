@@ -1,0 +1,19 @@
+{
+  "name": "Learning to code in Scala",
+  "courseLevelTypes": [
+    "advanced",
+    "intermediate",
+    "beginner"
+  ],
+  "image": "courseImages/scala/scala.svg",
+  "video": "https://www.youtube.com/embed/FvYS8r9Nt18",
+  "description": "The Scala programming language",
+  "language": "English",
+  "scope": [
+    "Learn Scala 3 syntax",
+    "Explore Scala's type system",
+    "Write functional code",
+    "Understand the JVM runtime"
+  ],
+  "sponsoredBy": "virtuslab"
+}

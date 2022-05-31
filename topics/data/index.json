@@ -1,0 +1,157 @@
+{
+  "name": "Data Modeling",
+  "description": "How we model real-world data using Scala constructs",
+  "lessons": [
+    {
+      "id": "enums",
+      "title": "Simple Enumerations",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/byN3JmE9UoQ",
+      "duration": 16,
+      "prerequisites": [
+        {
+          "reason": "simple enumerations are examples of objects",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "understand how enumerations model state",
+        "be able to write a simple enumeration of singleton cases",
+        "know how to define methods on enumeration values",
+        "understand how simple enumerations correspond to integers, and use the `ordinal` and `fromOrdinal` methods",
+        "be aware of the `valueOf` method as a complement to `toString` for enumerations"
+      ]
+    },
+    {
+      "id": "enums2",
+      "title": "Parameterized Enumerations",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/To9-wC-F2GY",
+      "duration": 14,
+      "prerequisites": [
+        {
+          "reason": "more advanced enumerations rely on subtype relationships",
+          "topicId": "types",
+          "lessonId": "subtyping"
+        }
+      ],
+      "syllabus": [
+        "be aware of the limitations of enumerations which include parameterized values",
+        "be able to write enumerations whose cases take value and type parameters",
+        "be aware that singleton cases are not permitted in enumerations with type parameters"
+      ]
+    },
+    {
+      "id": "caseclasses",
+      "title": "Case Classes",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "simple enumerations are examples of objects",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "recognize case classes as product types",
+        "understand how equality is defined for case class instances",
+        "be aware of the default `toString` implementation for case classes",
+        "be aware of the built-in pattern-matching functionality for case classes"
+      ]
+    },
+    {
+      "id": "sealedtraits",
+      "title": "Sealed Traits",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "syllabus": [
+        "recognize sealed traits as coproduct types",
+        "understand the relationship between sealed traits and enumerations",
+        "know the limitation that sealed traits must be defined in the same file and its motivation",
+        "be aware of the benefits of using sealed traits in exhaustive pattern matching"
+      ]
+    },
+    {
+      "id": "equality",
+      "title": "Equality",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "strict equality is implemented using typeclasses",
+          "topicId": "context",
+          "lessonId": "typeclasses"
+        }
+      ],
+      "syllabus": [
+        "be aware that there are often choices in how equality is defined",
+        "know how to use reference equality, and how it differs",
+        "be able to redefine `equality` for different objects",
+        "understand the contract of the `equals` and `hashCode` methods",
+        "be aware of the `CanEqual` typeclass, and that it provides a stricter notion of equality"
+      ]
+    },
+    {
+      "id": "representation",
+      "title": "State and Representation",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need total functions to understand state transitions",
+          "topicId": "concepts",
+          "lessonId": "totality"
+        }
+      ],
+      "syllabus": [
+        "understand the principle of making impossible states unrepresentable",
+        "be able to combine products and coproducts to represent data from real-world domains",
+        "understand how total functions can be used to transition between states",
+        "appreciate the design safety of only using total functions to transition between representable states"
+      ]
+    },
+    {
+      "id": "stringcontext",
+      "title": "String Contexts",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "extension methods will be used to implement string contexts",
+          "topicId": "context",
+          "lessonId": "extensions"
+        },
+        {
+          "reason": "interpolated strings are implemented with a syntactic desugaring",
+          "topicId": "syntax",
+          "lessonId": "sugar"
+        }
+      ],
+      "syllabus": [
+        "understand how an interpolated string transforms into a method call on a `StringContext` instance",
+        "know how to access the static parts of an interpolated string",
+        "implement a new string prefix with an extension method"
+      ]
+    },
+    {
+      "id": "multiversal",
+      "title": "Multiversal Equality",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "syllabus": [
+        "understand the purpose and usage of the `CanEqual` typeclass",
+        "be able to implement a `CanEqual` typeclass",
+        "be able to automatically derive `CanEqual` typeclasses",
+        "understand which values are comparable even when `strictEquality` is not enabled"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "name": "For comprehensions",
+  "description": "Working with for comprehensions",
+  "lessons": [
+    {
+      "id": "looping",
+      "title": "Looping",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to know the difference between expressions and statements",
+          "topicId": "foundations",
+          "lessonId": "expressions"
+        }
+      ],
+      "syllabus": [
+        "be able to use the `Range` type to specify inclusive and exclusive ranges of integers",
+        "be able to use a for comprehension to execute a block of code a number of times",
+        "be able to combine multiple generators in a single for comprehension"
+      ]
+    },
+    {
+      "id": "options",
+      "title": "Option, Try and Future",
+      "authorIds": ["jon-pretty"],
+      "duration": 28,
+      "video": "https://www.youtube.com/embed/uQI-LOj0f0s",
+      "prerequisites": [
+        {
+          "reason": "we will use lambdas with the methods `map` and `flatMap`",
+          "topicId": "foundations",
+          "lessonId": "lambdas"
+        }
+      ],
+      "syllabus": [
+        "be able to use the `Option` type, and its `getOrElse`, `map`, `fold` and `flatMap` methods",
+        "understand `Option` as a coproduct of `None` and `Some` alternatives",
+        "be aware of `Option` as a safer alternative to the `null` value",
+        "be able to use the `Try` type, and its `map` and `flatMap` methods",
+        "understand `Try` as a coproduct of `Success` and `Failure` alternatives",
+        "understand `Future` as a container for asynchronous computation, with `map` and `flatMap` methods",
+        "appreciate the generality of `map` and `flatMap` methods"
+      ]
+    },
+    {
+      "id": "monads",
+      "title": "Monads",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "video": "https://www.youtube.com/embed/6Izhl3C8ies",
+      "prerequisites": [
+        {
+          "reason": "we need to be able to think about methods which call themselves",
+          "topicId": "concepts",
+          "lessonId": "recursion"
+        }
+      ],
+      "syllabus": [
+        "appreciate the idea of a _functor_ as a generic type with an appropriate `map` method",
+        "appreciate the idea of _flattening_, as reducing a doubly-nested generic type to a singly-nested generic type",
+        "appreciate the idea of a `flatMap` method applying a `map` and flattening the result in a single operation",
+        "appreciate the essence of monadicity for a generic type as having utility in the simplification of flattening a doubly-nested instance"
+      ]
+    },
+    {
+      "id": "assignments",
+      "title": "Assignments and Filters",
+      "authorIds": ["jon-pretty"],
+      "duration": 9,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to assign a value to a named identifier in a for comprehension",
+        "be aware that an assignment cannot appear before a generator in a for-comprehension",
+        "be able to assign a given value in a for comprehension",
+	"be able to filter values in a for comprehension"
+      ]
+    },
+    {
+      "id": "transformation",
+      "title": "Syntactic Transformation",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we should understand the idea of syntactic sugar before looking at how it is applied to for comprehensions",
+          "topicId": "syntax",
+          "lessonId": "sugar"
+        }
+      ],
+      "syllabus":[]
+    },
+    {
+      "id": "laws",
+      "title": "Monad Laws",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "syllabus":[]
+    }
+  ]
+}
