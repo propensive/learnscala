@@ -1,19 +1,1981 @@
+{ "topics": [
 {
-  "name": "Learning to code in Scala",
-  "courseLevelTypes": [
-    "advanced",
-    "intermediate",
-    "beginner"
-  ],
-  "image": "courseImages/scala/scala.svg",
-  "video": "https://www.youtube.com/embed/FvYS8r9Nt18",
-  "description": "The Scala programming language",
-  "language": "English",
-  "scope": [
-    "Learn Scala 3 syntax",
-    "Explore Scala's type system",
-    "Write functional code",
-    "Understand the JVM runtime"
-  ],
-  "sponsoredBy": "virtuslab"
+  "name": "Collections",
+  "description": "Working with collections of values",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "video": "https://www.youtube.com/embed/X5KQUzoDujY",
+      "prerequisites": [
+        {
+          "reason": "to understand collection classes, we should first understand classes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        },
+        {
+          "reason": "collections are all generic types",
+          "topicId": "types",
+          "lessonId": "generics"
+        }
+      ],
+      "syllabus": [
+        "recognize a collection as a value containing values",
+        "understand how a new immutable collection value may be constructed from an existing one",
+        "be able to access elements by indexing, and understand that all collections are zero-indexed",
+        "be able to define new instances of `Vector`",
+        "append, prepend and combine instances of `Vector` using immutable collection operations"
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "Lists and Sets",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/0_NrC9rK6Pg",
+      "duration": 17,
+      "prerequisites": [
+        {
+          "reason": "there is a subtyping relationship between the types of certain collections",
+          "topicId": "types",
+          "lessonId": "subtyping"
+        },
+        {
+          "reason": "in the lesson we draw an analogy with enumerations",
+          "topicId": "data",
+          "lessonId": "enums2"
+        }
+      ],
+      "syllabus": [
+        "understand that different collection types store values in different structures to optimize different operations",
+        "recognize the names of the most commonly-used Scala collections",
+        "understand that subtyping relationships exist between different collection types",
+        "understand the structure of `List` instances",
+        "be aware of the differences in performance characteristics between common operations on `List`s and `Vector`s",
+        "understand that `Set`s correspond to the mathematical notion of a set",
+        "be able to add and remove elements from a `Set`, and check for existence of a value within a `Set` instance"
+      ]
+    },
+    {
+      "id": "methods",
+      "title": "Iterable Methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "many collection methods use lambdas",
+          "topicId": "foundations",
+          "lessonId": "lambdas"
+        }
+      ],
+      "syllabus": [
+        "know the purpose of the methods, `max`, `maxBy`, `min`, `minBy`, `sortBy`, `sortWith` and `sorted`",
+        "know the purpose of the methods, `foldLeft`, `foldRight` and `reduce`",
+        "know the purpose of the methods, `contains`, `find`, `findLast`, `indexWhere` and `groupBy`",
+        "know the puropes of the methods, `distinct`, `grouped`, `indices`, `distinct`, `tails`, `inits` and `sliding`",
+        "know the purpose of the methods, `collect`, `filter`, `count`, `contains`, `foreach`, `forall`, `exists` and `nonEmpty`",
+        "know the purpose of the methods, `drop`, `dropRight`, `dropWhile`, `take`, `takeRight` and `takeWhile`"
+      ]
+    },
+    {
+      "id": "maps",
+      "title": "Associative Maps",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "for maps to work fast, they need to use hashing",
+          "topicId": "concepts",
+          "lessonId": "hashing"
+        }
+      ],
+      "syllabus": [
+        "understand the primary function of a map datastructure as an association between keys and values",
+        "understand how hashing enables access of map elements in constant time",
+        "be able to construct `Map` instances from sequences of tuples",
+        "be able to implement a map with a default value",
+        "understand how a `Map` implements iterable methods",
+        "know how to use immutable `Map` methods such as `contains`, `keys` and `mapValues`"
+      ]
+    },
+    {
+      "id": "mutable",
+      "title": "Mutable Collections",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we should understand simple variables before mutable collections",
+          "topicId": "foundations",
+          "lessonId": "variables"
+        }
+      ],
+      "syllabus": [
+        "understand how mutable collections can change without copying",
+        "understand how `var`s are used to define mutable collections",
+        "know how to choose between a mutable and an immutable collection",
+        "know when to use `var`s and `val`s to store references to mutable and immutable collections",
+        "understand the consequences of using mutable collections",
+        "be able to convert between mutable and immutable collections"
+      ]
+    },
+    {
+      "id": "lazylists",
+      "title": "Lazy Lists",
+      "authorIds": ["jon-pretty"],
+      "duration": 27,
+      "prerequisites": [
+        {
+          "reason": "understanding by-name parameters is an essential prerequisite",
+          "topicId": "foundations",
+          "lessonId": "byname"
+        },
+        {
+          "reason": "we need to understand blocking to appreciate how lazy lists work",
+          "topicId": "runtime",
+          "lessonId": "blocking"
+        }
+      ],
+      "syllabus": [
+        "understand a `LazyList` as a linked list whose head and tail are evaluated lazily",
+        "recognize a `LazyList` as an immutable data structure",
+        "understand that a `LazyList` may be infinite",
+        "be able to define a `LazyList` recursively",
+        "be aware of how holding a reference to a `LazyList` can lead to memory leaks"
+      ]
+    },
+    {
+      "id": "streams",
+      "title": "Streaming",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true
+    }
+  ]
+}
+,
+{
+  "name": "Programming Concepts",
+  "description": "General concepts of programming and computer science",
+  "lessons": [
+    {
+      "id": "static",
+      "title": "Static vs Dynamic",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/eupgcKTO6AY",
+      "duration": 10,
+      "prerequisites": [
+        {
+          "reason": "this is a good topic to start with",
+          "topicId": "foundations",
+          "lessonId": "introduction"
+        }
+      ],
+      "syllabus": [
+        "understand the difference between the terms \"static\" and \"dynamic\"",
+        "be aware of what information is available at runtime and compiletime",
+        "understand the concept of typesafety and the guarantees it provides",
+        "understand the meaning of \"correctness\"",
+        "be aware of the limitations of types and of tests to show correctness"
+      ]
+    },
+    {
+      "id": "floatingpoint",
+      "title": "Floating-Point Numbers",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "prerequisites": [],
+      "syllabus": [
+        "understand the difference between the mathematical concept of real numbers and floating-point numbers",
+        "know the primitive types which represent floating-point numbers on the JVM",
+        "make good choices about when to use floating-point numbers and when to use integers",
+        "understand the meaning of the \"mantissa\" and \"exponent\" parts of a floating-point number",
+        "recognize when the numbers, `Infinity`, `-Infinity`, `-0.0` and `NaN` arise",
+        "understand the properties of `Infinity`, `-Infinity`, `-0.0` (vs `0.0`) and `NaN`",
+        "understand how the size of a floating-point number's mantissa and exponent influence its range",
+        "understand the difference between accuracy and precision",
+        "be aware that floating-point operations may be accurate, precise, both, or neither"
+      ]
+    },
+    {
+      "id": "hashing",
+      "title": "Hashing",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "video": "https://www.youtube.com/embed/p1qh7HoXxOA",
+      "prerequisites": [
+        {
+          "reason": "some of the examples in this lesson need an understanding of classes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "understand a hash as a one-way function",
+        "recognize the domain and range of a hash function",
+        "recognize common uses of hash functions",
+        "understand how hash functions are used in hashmaps",
+        "understand collisions and the properties of a good hash function",
+        "be aware of the distinction between cryptographic and non-cryptographic hash functions",
+        "understand the `hashCode` method and its properties with respect to the `equals` method"
+      ]
+    },
+    {
+      "id": "encodings",
+      "title": "Character Encodings",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "video": "https://www.youtube.com/embed/hI3m7q6ZwnM",
+      "prerequisites": [
+        {
+          "reason": "we first need to know how strings work in Scala",
+          "topicId": "foundations",
+          "lessonId": "strings"
+        }
+      ],
+      "syllabus": [
+        "understand that `String`s are stored in memory as binary",
+        "be aware of the necessity of character encodings to convert between binary and character data",
+        "understand that many different character encodings exist",
+        "be aware of the `UTF-8`, `ASCII` and `ISO-8859-1` encodings",
+        "understand what the Unicode standard represents",
+        "be aware of the different codepage sizes of `UTF-8`, `ASCII` and `ISO-8859-1`",
+        "understand the byte-length of characters in `UTF-8`, `ASCII` and `ISO-8859-1`",
+        "know the difference between Unicode and `UTF-8`",
+        "recognize badly-encoded text, and make educated guesses about encoding mismatches"
+      ]
+    },
+    {
+      "id": "recursion",
+      "title": "Recursion",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "prerequisites": [
+        {
+          "reason": "Lists are the prototypical recursive data structure used in most examples",
+          "topicId": "collections",
+          "lessonId": "lists"
+        }
+      ],
+      "comingSoon": true,
+      "syllabus": [
+        "understand what it means for a method to be recursive",
+        "know that recursive methods must have declared return types",
+        "understand recursive methods in terms of a base case and an induction step",
+        "understand the risks of stack overflow from recursive methods",
+        "be aware of mutual recursion between two or more methods"
+      ]
+    },
+    {
+      "id": "reftrans",
+      "title": "Referential Transparency",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the concept of referential transparency and its benefits",
+        "be aware of the Scala convention for indicating that a parameterless method is side-effecting"
+      ]
+    },
+    {
+      "id": "binary",
+      "title": "Binary",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand how integers are represented in binary",
+        "know how to calculate a decimal number from its binary representation",
+        "understand how _two's complement_ can be used to represent negative numbers",
+        "be able to use the binary bitwise operators, `|`, `&`, `^` and unary operator `~`",
+        "be able to use the shift operators, `<<`, `>>` and `>>>`",
+        "be aware of the difference between the `>>` and `>>>` operators"
+      ]
+    },
+    {
+      "id": "hex",
+      "title": "Hexadecimal Numbers",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand hexadecimal numbers as a base-16 number system",
+        "recognize the suitability of hexadecimal for representing numbers on computers",
+        "be able to convert a hexadecimal number to its decimal representation"
+      ]
+    },
+    {
+      "id": "tailrec",
+      "title": "Tail Recursion",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand what tail recursion is and why it is desirable",
+        "know how to identify whether a method definition is tail recursive or not",
+        "be able to transform a simple non-tail-recursive method into a tail-recursive one",
+        "be able to use the `@tailrec` annotation on methods",
+        "understand that the `@tailrec` annotation _checks_ (rather than _changes_) behavior"
+      ]
+    },
+    {
+      "id": "totality",
+      "title": "Totality and Partiality",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the difference between a partial and a total method",
+        "know how total and partial functions are represented",
+        "understand the JVM's limitations in representing total functions"
+      ]
+    },
+    {
+      "id": "complexity",
+      "title": "Computational Complexity",
+      "authorIds": ["jon-pretty"],
+      "duration": 28,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "operations on collections provide many examples where computational complexity is important",
+          "topicId": "collections",
+          "lessonId": "methods"
+        },
+        {
+          "reason": "we should see how complexity arises from the desugaring of for comprehensions",
+          "topicId": "fors",
+          "lessonId": "transformation"
+        }
+      ],
+      "syllabus": [
+
+      ]
+    }
+  ]
+}
+,
+{
+  "name": "Context",
+  "description": "Using given context",
+  "lessons": [
+    {
+      "id": "givens",
+      "title": "Given Context",
+      "authorIds": ["jon-pretty"],
+      "duration": 17,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to understand how given context is resolved by its type",
+          "topicId": "types",
+          "lessonId": "hierarchy"
+        }
+      ],
+      "syllabus": [
+        "understand the philosophy of contextual values",
+        "be able to introduce a typed given value into scope",
+        "be able to summon a contextual value by type"
+      ]
+    },
+    {
+      "id": "typeclasses",
+      "title": "Typeclasses",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "typeclasses are implemented using generic types",
+          "topicId": "types",
+          "lessonId": "generics"
+        },
+        {
+          "reason": "SAM syntax will be frequently used when defining typeclass instances",
+          "topicId": "syntax",
+          "lessonId": "sam"
+        }
+      ],
+      "syllabus": [
+        "understand the typical structure of a typeclass as a parameterized trait with a single abstract method",
+        "be able to distinguish between a typeclass definition and a typeclass instance",
+        "be able to define simple given typeclass instances",
+        "understand how typeclasses provide ad-hoc polymorphism",
+        "be aware of the advantages of ad-hoc polymorphism over subtype polymorphism"
+      ]
+    },
+    {
+      "id": "contextbounds",
+      "title": "Context Bounds",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "comingSoon": true,
+      "prerequisites": [],
+      "syllabus": [
+        "be able to specify a context bound on a type parameter for a method or template",
+        "understand how a context bound translates to the type of a contextual value"
+      ]
+    },
+    {
+      "id": "using",
+      "title": "Using Context",
+      "authorIds": ["jon-pretty"],
+      "duration": 9,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to understand the basics of parameters since they are used for \"using\" context",
+          "topicId": "foundations",
+          "lessonId": "params"
+        }
+      ],
+      "syllabus": [
+        "be able to define _using_ parameters by type, with or without a term identifier",
+        "be able to explicitly apply a contextual value to a _using_ parameter"
+      ]
+    },
+    {
+      "id": "resolution",
+      "title": "Given Resolution",
+      "authorIds": ["jon-pretty"],
+      "duration": 17,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "the companion objects of types are fundamental to contextual resolution",
+          "topicId": "templates",
+          "lessonId": "companions"
+        }
+      ],
+      "syllabus": [
+        "understand how enclosing scope and implicit scope are searched, in order, for matching contextual values",
+        "be aware of the criteria for disambiguating between different contextual values when more than one is found",
+        "understand how custom error messages may be provided when a unique contextual value cannot be found"
+      ]
+    },
+    {
+      "id": "extensions",
+      "title": "Extension Methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to extend a type with new methods",
+        "understand that extension methods extend types rather than templates",
+        "be aware that methods defined in the same extension can call each other directly",
+	"know that term members take priority over extension methods"
+      ]
+    },
+    {
+      "id": "contextfunctions",
+      "title": "Context Functions",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to write the function type corresponding to a method taking a _using_ parameter",
+        "know how to use a context function to provide a contextual value to a method parameter"
+      ]
+    },
+    {
+      "id": "typeclasses2",
+      "title": "Advanced Typeclasses",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true
+    },
+    {
+      "id": "derivation",
+      "title": "Typeclass Derivation",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "transparent inline methods are used extensively during typeclass derivation",
+          "topicId": "metaprogramming",
+          "lessonId": "transparent"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "name": "Data Modeling",
+  "description": "How we model real-world data using Scala constructs",
+  "lessons": [
+    {
+      "id": "enums",
+      "title": "Simple Enumerations",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/byN3JmE9UoQ",
+      "duration": 16,
+      "prerequisites": [
+        {
+          "reason": "simple enumerations are examples of objects",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "understand how enumerations model state",
+        "be able to write a simple enumeration of singleton cases",
+        "know how to define methods on enumeration values",
+        "understand how simple enumerations correspond to integers, and use the `ordinal` and `fromOrdinal` methods",
+        "be aware of the `valueOf` method as a complement to `toString` for enumerations"
+      ]
+    },
+    {
+      "id": "enums2",
+      "title": "Parameterized Enumerations",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/To9-wC-F2GY",
+      "duration": 14,
+      "prerequisites": [
+        {
+          "reason": "more advanced enumerations rely on subtype relationships",
+          "topicId": "types",
+          "lessonId": "subtyping"
+        }
+      ],
+      "syllabus": [
+        "be aware of the limitations of enumerations which include parameterized values",
+        "be able to write enumerations whose cases take value and type parameters",
+        "be aware that singleton cases are not permitted in enumerations with type parameters"
+      ]
+    },
+    {
+      "id": "caseclasses",
+      "title": "Case Classes",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "simple enumerations are examples of objects",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "recognize case classes as product types",
+        "understand how equality is defined for case class instances",
+        "be aware of the default `toString` implementation for case classes",
+        "be aware of the built-in pattern-matching functionality for case classes"
+      ]
+    },
+    {
+      "id": "sealedtraits",
+      "title": "Sealed Traits",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "syllabus": [
+        "recognize sealed traits as coproduct types",
+        "understand the relationship between sealed traits and enumerations",
+        "know the limitation that sealed traits must be defined in the same file and its motivation",
+        "be aware of the benefits of using sealed traits in exhaustive pattern matching"
+      ]
+    },
+    {
+      "id": "equality",
+      "title": "Equality",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "strict equality is implemented using typeclasses",
+          "topicId": "context",
+          "lessonId": "typeclasses"
+        }
+      ],
+      "syllabus": [
+        "be aware that there are often choices in how equality is defined",
+        "know how to use reference equality, and how it differs",
+        "be able to redefine `equality` for different objects",
+        "understand the contract of the `equals` and `hashCode` methods",
+        "be aware of the `CanEqual` typeclass, and that it provides a stricter notion of equality"
+      ]
+    },
+    {
+      "id": "representation",
+      "title": "State and Representation",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need total functions to understand state transitions",
+          "topicId": "concepts",
+          "lessonId": "totality"
+        }
+      ],
+      "syllabus": [
+        "understand the principle of making impossible states unrepresentable",
+        "be able to combine products and coproducts to represent data from real-world domains",
+        "understand how total functions can be used to transition between states",
+        "appreciate the design safety of only using total functions to transition between representable states"
+      ]
+    },
+    {
+      "id": "stringcontext",
+      "title": "String Contexts",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "extension methods will be used to implement string contexts",
+          "topicId": "context",
+          "lessonId": "extensions"
+        },
+        {
+          "reason": "interpolated strings are implemented with a syntactic desugaring",
+          "topicId": "syntax",
+          "lessonId": "sugar"
+        }
+      ],
+      "syllabus": [
+        "understand how an interpolated string transforms into a method call on a `StringContext` instance",
+        "know how to access the static parts of an interpolated string",
+        "implement a new string prefix with an extension method"
+      ]
+    },
+    {
+      "id": "multiversal",
+      "title": "Multiversal Equality",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "syllabus": [
+        "understand the purpose and usage of the `CanEqual` typeclass",
+        "be able to implement a `CanEqual` typeclass",
+        "be able to automatically derive `CanEqual` typeclasses",
+        "understand which values are comparable even when `strictEquality` is not enabled"
+      ]
+    }
+  ]
+}
+,
+{
+  "name": "For comprehensions",
+  "description": "Working with for comprehensions",
+  "lessons": [
+    {
+      "id": "looping",
+      "title": "Looping",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to know the difference between expressions and statements",
+          "topicId": "foundations",
+          "lessonId": "expressions"
+        }
+      ],
+      "syllabus": [
+        "be able to use the `Range` type to specify inclusive and exclusive ranges of integers",
+        "be able to use a for comprehension to execute a block of code a number of times",
+        "be able to combine multiple generators in a single for comprehension"
+      ]
+    },
+    {
+      "id": "options",
+      "title": "Option, Try and Future",
+      "authorIds": ["jon-pretty"],
+      "duration": 28,
+      "video": "https://www.youtube.com/embed/uQI-LOj0f0s",
+      "prerequisites": [
+        {
+          "reason": "we will use lambdas with the methods `map` and `flatMap`",
+          "topicId": "foundations",
+          "lessonId": "lambdas"
+        }
+      ],
+      "syllabus": [
+        "be able to use the `Option` type, and its `getOrElse`, `map`, `fold` and `flatMap` methods",
+        "understand `Option` as a coproduct of `None` and `Some` alternatives",
+        "be aware of `Option` as a safer alternative to the `null` value",
+        "be able to use the `Try` type, and its `map` and `flatMap` methods",
+        "understand `Try` as a coproduct of `Success` and `Failure` alternatives",
+        "understand `Future` as a container for asynchronous computation, with `map` and `flatMap` methods",
+        "appreciate the generality of `map` and `flatMap` methods"
+      ]
+    },
+    {
+      "id": "monads",
+      "title": "Monads",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "video": "https://www.youtube.com/embed/6Izhl3C8ies",
+      "prerequisites": [
+        {
+          "reason": "we need to be able to think about methods which call themselves",
+          "topicId": "concepts",
+          "lessonId": "recursion"
+        }
+      ],
+      "syllabus": [
+        "appreciate the idea of a _functor_ as a generic type with an appropriate `map` method",
+        "appreciate the idea of _flattening_, as reducing a doubly-nested generic type to a singly-nested generic type",
+        "appreciate the idea of a `flatMap` method applying a `map` and flattening the result in a single operation",
+        "appreciate the essence of monadicity for a generic type as having utility in the simplification of flattening a doubly-nested instance"
+      ]
+    },
+    {
+      "id": "assignments",
+      "title": "Assignments and Filters",
+      "authorIds": ["jon-pretty"],
+      "duration": 9,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to assign a value to a named identifier in a for comprehension",
+        "be aware that an assignment cannot appear before a generator in a for-comprehension",
+        "be able to assign a given value in a for comprehension",
+	"be able to filter values in a for comprehension"
+      ]
+    },
+    {
+      "id": "transformation",
+      "title": "Syntactic Transformation",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we should understand the idea of syntactic sugar before looking at how it is applied to for comprehensions",
+          "topicId": "syntax",
+          "lessonId": "sugar"
+        }
+      ],
+      "syllabus":[]
+    },
+    {
+      "id": "laws",
+      "title": "Monad Laws",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "syllabus":[]
+    }
+  ]
+}
+,
+{
+  "name": "Foundations",
+  "description": "Fundamental topics for learning to program in Scala",
+  "lessons": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/FvYS8r9Nt18",
+      "duration": 9,
+      "syllabus": []
+    },
+    {
+      "id": "running",
+      "title": "Installing and Running Scala",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "comingSoon": true,
+      "syllabus": [
+        "understand how the `scalac` command compiles source code to Java bytecode",
+        "understand how the `scala` command may be used to run a Scala program",
+        "be able to launch the REPL using the `scala` command"
+      ]
+    },
+    {
+      "id": "expressions",
+      "title": "Expressions and Statements",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/fKCrvlBGbow",
+      "duration": 14,
+      "syllabus": [
+        "understand what an expression is",
+        "understand a statement as an expression which returns `Unit`",
+        "understand that expressions compose",
+        "understand purity and side-effects",
+        "be aware that an expression can either return normally or throw an exception"
+      ]
+    },
+    {
+      "id": "helloworld",
+      "title": "Our First Program",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/KOz_53LlAMI",
+      "duration": 12,
+      "syllabus": [
+        "understand the concept of an _entry point_ and be able to define a `main` method",
+        "recognize that different environments may have different entry points",
+        "be able to write the \"Hello World\" program in Scala"
+      ]
+    },
+    {
+      "id": "defs",
+      "title": "Definitions",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/KLlAcPIUBKs",
+      "duration": 15,
+      "prerequisites": [
+        {
+          "reason": "all value definitions will have a type, so we need a basic intuition for types first",
+          "topicId": "types",
+          "lessonId": "basics"
+        }
+      ],
+      "syllabus": [
+        "understand `def` as the means of defining a new named method",
+        "be able to specify parameters on a method",
+        "know that methods may be pure or side-effecting",
+        "understand the role of the return type in a method definition",
+        "understand methods as reusable code",
+        "understand the differences between a `val` and a `def` definition"
+      ]
+    },
+    {
+      "id": "strings",
+      "title": "Strings",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/DeG6wmkCou0",
+      "duration": 22,
+      "prerequisites": [],
+      "syllabus": [
+        "understand the `String` type as a representation of a series of characters",
+        "know that strings in Scala are immutable",
+        "understand that `String`s always represent Unicode characters",
+        "know how to escape special characters in `String` literals",
+        "be able to write `Char` literals",
+        "be able to write triple-quoted string literals, and understand the differences in escaping",
+        "be able to write interpolated strings with value substitutions"
+      ]
+    },
+    {
+      "id": "arithmetic",
+      "title": "Arithmetic",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/nAV4Qd9glWY",
+      "duration": 15,
+      "prerequisites": [],
+      "syllabus": [
+        "understand the number types to which standard arithmetic operations apply",
+        "recognize that different binary operators have different precedence",
+        "know the precedence order for binary operators which commonly appear together in boolean expressions",
+        "know the precedence order for binary operators which commonly appear together in numerical expressions",
+        "understand how parentheses affect evaluation order",
+        "know that operators whose names end in a colon are right-associative",
+        "recognize that arithmetic operations between numeric types may return a value of a different type",
+        "be aware of the concept of constant folding when evaluating static arithmetic"
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "Functions",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [
+        {
+          "reason": "this lesson explains how functions are objects, but we need to understand objects first",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "understand the concept of functions as values",
+        "know the difference between functions and methods",
+        "know how to write the types of functions using the `=>` type operator",
+        "understand what is encapsulated in a function's type, and what is not"
+      ]
+    },
+    {
+      "id": "lambdas",
+      "title": "Lambdas",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "video": "https://www.youtube.com/embed/IMeiRxmQJss",
+      "prerequisites": [
+        {
+          "reason": "some of the advanced topics in this lesson make reference to the JVM's memory model",
+          "topicId": "runtime",
+          "lessonId": "memory"
+        }
+      ],
+      "syllabus": [
+        "understand a lambda as an anonymous function literal",
+        "be able to write lambdas with one or more parameters",
+        "understand the concept of variable capture",
+        "be able to read and write lambdas using lightweight underscore syntax, for one or more parameters"
+      ]
+    },
+    {
+      "id": "scopes",
+      "title": "Scopes and Namespaces",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/IOnttJYoj_4",
+      "duration": 9,
+      "prerequisites": [
+        {
+          "reason": "classes are one of the primary constructs which give rise to scopes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "understand the requirement that identifiers in source code must be uniquely resolved to their definitions",
+        "understand the concept of nested scopes",
+        "be aware of type and term namespaces",
+        "be aware of shadowing"
+      ]
+    },
+    {
+      "id": "primitives",
+      "title": "Primitives",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "recognize the eight primitive types",
+        "know how many bits are used to represent each primitive type",
+        "know the four integral primitive types and how to calculate the range of numbers that can be expressed by each",
+        "know the two floating-point primitive types",
+        "understand how primitive types are stored in memory in contrast to reference types",
+        "know that the primitive types are all subtypes of `AnyVal`"
+      ]
+    },
+    {
+      "id": "variables",
+      "title": "Variables",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "be able to define a new variable using the `var` keyword, and reassign values to it",
+        "be aware of the differences between local variables and class fields",
+        "understand the risks of using mutable state"
+      ]
+    },
+    {
+      "id": "varargs",
+      "title": "Repeated Parameters",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "this lesson will build upon case class definitions",
+          "topicId": "data",
+          "lessonId": "caseclasses"
+        },
+        {
+          "reason": "extracting repeated parameters requires an understanding of extracting non-repeated parameters first",
+          "topicId": "patterns",
+          "lessonId": "extractors"
+        }
+      ],
+      "syllabus": [
+        "be able to define a method which takes repeated parameters",
+        "be able to pass a sequence of values to a method in variadic parameter position",
+        "understand the limitations of mixing sequences and individual parameters to variadic methods",
+        "be able to define a case class with repeated parameters",
+        "be able to pattern match on a variadic case class or extractor"
+      ]
+    },
+    {
+      "id": "params",
+      "title": "Named and Default Parameters",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand that methods and templates may have default parameter values",
+        "apply parameters to a method positionally and nominally",
+        "understand the constraints on calling method parameters nominally"
+      ]
+    },
+    {
+      "id": "byname",
+      "title": "Advanced Parameters",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "be able to define _by-name_ method and template parameters",
+        "be able to define template parameters as fields using `val`",
+        "be able to define parameters in more than one parameter block",
+        "understand partial application"
+      ]
+    },
+    {
+      "id": "tuples",
+      "title": "Tuples",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "recognize tuples as anonymous product types",
+        "be able to access indexed tuple elements"
+      ]
+    },
+    {
+      "id": "hlists",
+      "title": "Heterogeneous Lists",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "Match types are useful for decomposing the types of HLists",
+          "topicId": "patterns",
+          "lessonId": "matchtypes"
+        }
+      ],
+      "syllabus":[]
+    }
+  ]
+}
+,
+,
+{
+  "name": "Metaprogramming",
+  "description": "Metaprogramming in Scala",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "this lesson needs a good understanding of the foundations of Scala",
+          "topicId": "foundations",
+          "lessonId": "scopes"
+        },
+        {
+          "reason": "some basic understanding of programming concepts are necessary",
+          "topicId": "concepts",
+          "lessonId": "reftrans"
+        }
+      ]
+    },
+    {
+      "id": "inlines",
+      "title": "Inlining methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true
+    },
+    {
+      "id": "asts",
+      "title": "Abstract Syntax Trees",
+      "authorIds": ["jon-pretty"],
+      "duration": 23,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "metaprogrammers need to understand how the Scala compiler reads code",
+          "topicId": "syntax",
+          "lessonId": "parsing"
+        }
+      ]
+    },
+    {
+      "id": "macros",
+      "title": "Macros",
+      "authorIds": ["jon-pretty"],
+      "duration": 23,
+      "comingSoon": true
+    },
+    {
+      "id": "quotes",
+      "title": "Quotes and Splices",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we cannot use quotes and splices without understanding context",
+          "topicId": "context",
+          "lessonId": "using"
+        }
+      ]
+    },
+    {
+      "id": "phases",
+      "title": "Phase Consistency",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true
+    },
+    {
+      "id": "typereprs",
+      "title": "Types and their Representation",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "a full understanding of Scala's types is a prerequisite to understanding their representation",
+          "topicId": "types",
+          "lessonId": "polykinded"
+        }
+      ]
+    },
+    {
+      "id": "transparent",
+      "title": "Transparent Inlining",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "comingSoon": true
+    },
+    {
+      "id": "staging",
+      "title": "Staging",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true
+    }
+  ]
+}
+,
+{
+  "name": "Pattern Matching",
+  "description": "Matching and deconstructing values in Scala with Patterns",
+  "lessons": [
+    {
+      "id": "simple",
+      "title": "Simple matching",
+      "authorIds": ["jon-pretty"],
+      "duration": 8,
+      "video": "https://www.youtube.com/embed/rhhkLMfyysA",
+      "prerequisites": [
+        {
+          "reason": "pattern matches are composed of (and are themselves) expressions, so we should understand these first",
+          "topicId": "foundations",
+          "lessonId": "expressions"
+        },
+        {
+          "reason": "our first examples of pattern matching will use enums",
+          "topicId": "data",
+          "lessonId": "enums"
+        }
+      ],
+      "syllabus": [
+        "be able to match by equality against objects",
+        "understand that a match is an expression which returns a value"
+      ]
+    },
+    {
+      "id": "destructuring",
+      "title": "Structural Matching",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/C-PI5HXlPTE",
+      "duration": 14,
+      "syllabus": [
+        "be able to match against structured data such as case classes and enum values",
+        "understand how patterns destructure recursively",
+        "appreciate that the structure of a pattern mirrors the structure of the construction of the same object"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "Pattern Syntax",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/dnSr2Ky3JxY",
+      "duration": 15,
+      "syllabus": [
+        "recognize that the difference between binding and matching is determined by the case of the first letter of the pattern object",
+        "be able to quote identifiers in patterns using backticks",
+        "specify pattern alternatives using alternation syntax",
+        "be aware of the constraints on binding and alternation"
+      ]
+    },
+    {
+      "id": "extractors",
+      "title": "Extractors",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [
+        {
+          "reason": "it is useful to be familiar with matching case class instances in patterns to see how custom extractors may be defined",
+          "topicId": "data",
+          "lessonId": "caseclasses"
+        }
+      ],
+      "syllabus": [
+        "understand how pattern matching translates into method calls",
+        "recognize that pattern matching on structural enums and case classes is provided using extractors",
+        "know the appropriate signature for an extractor",
+        "be able to implement a simple extractor on a companion object"
+      ]
+    },
+    {
+      "id": "collections",
+      "title": "Matching on Collections",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/Mobst4aunLk",
+      "prerequisites": [
+        {
+          "reason": "it would be useful to know a few collections before we try to pattern match on them",
+          "topicId": "collections",
+          "lessonId": "lists"
+        }
+      ],
+      "syllabus": [
+        "be able to use the `::` extractor on `List`s",
+        "be able to use the `:+` and `+:` extractors on sequence types",
+        "understand that infix extractors are ordinary two-parameter extractors",
+        "understand why a `++` extractor does not exist"
+      ]
+    },
+    {
+      "id": "exhaustivity",
+      "title": "Exhaustivity",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "video": "https://www.youtube.com/embed/8t8CQNXgdXo",
+      "prerequisites": [
+        {
+          "reason": "the concept of exhaustivity relies upon understanding totality and partiality",
+          "topicId": "concepts",
+          "lessonId": "totality"
+        },
+        {
+          "reason": "this lesson will explore how exhaustivity applies to union types",
+          "topicId": "types",
+          "lessonId": "unions"
+        }
+      ],
+      "syllabus": [
+        "understand the concept of exhaustivity and its relationship with totality",
+        "recognize that a wildcard match guarantees exhaustivity",
+        "be able to write a guard clause and understand how it affects exhaustivity checking"
+      ]
+    },
+    {
+      "id": "extractors2",
+      "title": "Advanced Extraction",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [
+      ],
+      "syllabus": [
+        "understand what it means for an extractor to be irrefutable",
+        "be able to implement an irrefutable extractor",
+        "understand the alternative ways to implement an extractor"
+      ]
+    },
+    {
+      "id": "gadts",
+      "title": "GADTs",
+      "authorIds": ["jon-pretty"],
+      "duration": 25,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "GADTs rely on case classes and sealed traits",
+          "topicId": "data",
+          "lessonId": "sealedtraits"
+        }
+      ]
+    },
+    {
+      "id": "matchtypes",
+      "title": "Match Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "a good understanding of types in required in order to match upon them",
+          "topicId": "types",
+          "lessonId": "polykinded"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "name": "The Runtime",
+  "description": "The JVM runtime environment",
+  "lessons": [
+    {
+      "id": "jvm",
+      "title": "The JVM",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/6xe4bmJF-JM",
+      "prerequisites": [
+        {
+          "reason": "it helps to see at least one working programming before exploring the JVM",
+          "topicId": "foundations",
+          "lessonId": "helloworld"
+        }
+      ],
+      "syllabus": [
+        "understand the JVM as a virtual model of a machine with consistent behavior on different hardware",
+        "be able to distinguish between an instance of the JVM and the JVM Specification, from context",
+        "understand Java bytecode as the primary form of input to the JVM, but distinct from source code",
+        "be aware of `javap` as a tool for displaying Java bytecode in a readable format"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "The Memory Model",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "video": "https://www.youtube.com/embed/kA4CtzUoCvU",
+      "prerequisites": [
+        {
+          "reason": "Java's memory stores objects, so we need to understand them first",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "be aware of the heap and the stack as distinct areas of memory",
+        "know that objects are allocated on the heap",
+        "be aware that bytecode operates using addresses to objects stored on the heap, but whose numerical value is concealed",
+        "understand the cleanup of unused objects by garbage collection",
+        "recognize that garbage is typically unpredictable and may cause execution pauses",
+        "be aware of the names of different regions of memory accessible on the JVM"
+      ]
+    },
+    {
+      "id": "stack",
+      "title": "The Execution Stack",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "video": "https://www.youtube.com/embed/es68rZbORoc",
+      "prerequisites": [
+        {
+          "reason": "the stack contains references to methods in classes, so we should understand classes first",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "know the stack as a FILO data structure which keeps track of the execution of code",
+        "recognize popping and pushing as the two basic operations on a stack",
+        "understand the basic mechanism for continuing execution after a method returns",
+        "be aware that a method may either return normally or throw an exception",
+        "recognize and be able to interpret a stack trace"
+      ]
+    },
+    {
+      "id": "blocking",
+      "title": "Blocking",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "understand the concept of blocking during execution",
+        "appreciate why blocking is often undesirable",
+        "understand the terms _I/O-bound_ and _CPU-bound_"
+      ]
+    },
+    {
+      "id": "threads",
+      "title": "Threads",
+      "video": "https://www.youtube.com/embed/0OYNrUtc_vA",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "prerequisites": [
+        {
+          "reason": "we will be defining threads by inheritance, so this must be understood first",
+          "topicId": "templates",
+          "lessonId": "inheritance"
+        }
+      ],
+      "syllabus": [
+        "understand threading as a model for appearing to do multiple operations independently",
+        "recognize that threads provide independence but not isolation",
+        "understand the concept of synchronization, and be able to synchronize on an object",
+        "be aware of the risks of deadlock"
+      ]
+    },
+    {
+      "id": "erasure",
+      "title": "Type Erasure",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [
+        {
+          "reason": "generics are a typical feature of Scala's type system that is affected by the limitations of erasure",
+          "topicId": "types",
+          "lessonId": "generics"
+        }
+      ],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the limitations of modeling static types at runtime",
+        "recognize the concept of erasure in approximating compiletime types",
+        "be able to identify types which erase to the same runtime type"
+      ]
+    },
+    {
+      "id": "decompilation",
+      "title": "Decompilation",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "prerequisites": [],
+      "comingSoon": true
+    }
+  ]
+}
+,
+{
+  "name": "Syntax",
+  "description": "The syntax of Scala code",
+  "lessons": [
+    {
+      "id": "whitespace",
+      "title": "Meaningful Whitespace",
+      "authorIds": ["jon-pretty"],
+      "duration": 17,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "Scala's whitespace syntax makes most sense after we have written our first program",
+          "topicId": "foundations",
+          "lessonId": "helloworld"
+        }
+      ],
+      "syllabus": [
+        "understand the significance of whitespace in Scala source code",
+        "understand how whitespace may be used to delimit scopes, and its equivalence to braces"
+      ]
+    },
+    {
+      "id": "keywords",
+      "title": "Scala Keywords",
+      "authorIds": ["jon-pretty"],
+      "duration": 16,
+      "comingSoon": true,
+      "syllabus": [
+        "recognize every Scala keyword",
+        "be aware of soft keywords and how they differ from other keywords",
+        "know how to use a Scala keyword as an identifier"
+      ]
+    },
+    {
+      "id": "blocks",
+      "title": "Code blocks",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "it is good to see a real example of how code blocks are used first",
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ],
+      "syllabus": [
+        "understand a block as a sequence of declarations and statements",
+        "be aware of where order is and is not significant",
+        "understand the relationship between blocks and scopes"
+      ]
+    },
+    {
+      "id": "sugar",
+      "title": "Syntactic Sugar",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "syllabus": [
+        "understand the concept of syntactic sugar",
+        "know how application and applied assignment translate into `apply` and `update` method calls",
+        "recognize setter methods",
+        "know how unary prefix operators transform into method calls",
+        "know the shorthand for mutating a variable with an existing binary symbolic operator",
+        "understand that different desugarings may be applied orthogonally"
+      ]
+    },
+    {
+      "id": "dynamic",
+      "title": "Dynamic Objects",
+      "authorIds": ["jon-pretty"],
+      "duration": 27,
+      "syllabus": [
+        "know how the `Dynamic` trait can be used to allow arbitrarily-named selections on objects",
+        "understand how different patterns of selection and application on a `Dynamic` object translate into static method invocations",
+        "know that static methods defined on a `Dynamic` object will always be selected in preference to dynamic invocations"
+      ]
+    },
+    {
+      "id": "sam",
+      "title": "Single Abstract Method Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "be able to recognize a single-abstract-method (SAM) type",
+        "know the lightweight syntax for implementing a SAM type"
+      ]
+    },
+    {
+      "id": "parsing",
+      "title": "Parsing",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true,
+      "syllabus": []
+    }
+  ]
+}
+,
+{
+  "name": "Templates",
+  "description": "Classes, traits, objects and their creation",
+  "lessons": [
+    {
+      "id": "objects",
+      "title": "Objects",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/72l8Kmwhlk4",
+      "duration": 11,
+      "prerequisites": [
+        {
+          "reason": "we will need to create some definitions within objects",
+          "topicId": "foundations",
+          "lessonId": "defs"
+        },
+        {
+          "reason": "every object has a type, and  basic understanding of types is useful",
+          "topicId": "types",
+          "lessonId": "basics"
+        }
+      ],
+      "syllabus": [
+        "understand an object as a singleton instance of a reference type",
+        "be able to define an object with state, and access its member values and methods",
+        "understand the concept of encapsulation for bundling state with methods that operate on that state",
+        "understand that an object's identifier corresponds to an opaque reference to the object in memory",
+        "know that objects are instantiated lazily",
+        "know that the object's body is executed when the object is instantiated"
+      ]
+    },
+    {
+      "id": "classes",
+      "title": "Classes",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/LQtROAUWfYU",
+      "syllabus": [
+        "understand a class as a template from which many related object instances may be constructed",
+        "be able to define a class which takes constructor parameters, and use those parameters in the class body",
+        "be able to construct a new class instance by calling its constructor",
+        "understand how a class definition gives rise to a corresponding type",
+        "understand the concept of inheritance"
+      ]
+    },
+    {
+      "id": "traits",
+      "title": "Traits",
+      "authorIds": ["jon-pretty"],
+      "duration": 20,
+      "video": "https://www.youtube.com/embed/hrT33GtAP_A",
+      "prerequisites": [
+        {
+          "reason": "inheritance from traits requires an understanding of subtyping",
+          "topicId": "types",
+          "lessonId": "subtyping"
+        }
+      ],
+      "syllabus": [
+        "recognize traits as a way to define multiple inheritance between different types",
+        "understand multiple inheritance as the union of inherited properties",
+        "understand method signatures and be able to define abstract methods",
+        "know that all abstract methods must be implemented to instantiate a class or trait",
+        "be able to use the `abstract` modifier for classes, and know when it is required"
+      ]
+    },
+    {
+      "id": "inheritance",
+      "title": "Inheritance",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "video": "https://www.youtube.com/embed/5uAkpxI-GUk",
+      "prerequisites": [],
+      "syllabus": [
+        "understand the constraints on trait inheritance",
+        "know that constructor parameters are private to the trait body",
+        "understand the initialization order of inherited traits"
+      ]
+    },
+    {
+      "id": "overriding",
+      "title": "Overriding",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "be able to redefine inherited methods using the `override` modifier",
+        "understand the motivation for the `override` modifier",
+        "know that an overridden method may have a more precise return type"
+      ]
+    },
+    {
+      "id": "companions",
+      "title": "Companion Objects",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "know that templates have companion objects, and how they are named",
+        "recognize the privileges that companion objects have for their associated template",
+        "recognize companion objects as a place to define factory methods"
+      ]
+    },
+    {
+      "id": "overloading",
+      "title": "Overloading and Resolution",
+      "authorIds": ["jon-pretty"],
+      "duration": 18,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "understand the difference between overriding and overloading",
+        "understand how overloaded methods are resolved",
+        "understand when ambiguous overloads can occur"
+      ]
+    },
+    {
+      "id": "variances",
+      "title": "Declaring Variance",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "we need to first understand how variance affects the subtyping relationship between types",
+          "topicId": "types",
+          "lessonId": "variance"
+        }
+      ],
+      "syllabus": [
+        "know how to annotate a template's type parameter with `+` or `-` to indicate its variance",
+        "understand how the uses of type parameters constrain their possible variance"
+      ]
+    },
+    {
+      "id": "selftypes",
+      "title": "Self-types",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "prerequisites": [],
+      "comingSoon": true,
+      "syllabus": [
+        "recognize the syntax for declaring a self-type constraint on a class or trait",
+        "be able to use self-type syntax, without a type, to alias `this`",
+        "understand the constraints that a self-type places on a where a trait can be mixed-in"
+      ]
+    }
+  ]
+}
+,
+{
+  "name": "Types",
+  "description": "All about Scala's Type System",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/G2oyqW8VyqM",
+      "duration": 12,
+      "prerequisites": [
+        {
+          "reason": "we should know how a trivial program works before exploring types",
+          "topicId": "foundations",
+          "lessonId": "helloworld"
+        },
+        {
+          "reason": "types are a static concept, and we should be clear about the distinction between runtime and compiletime",
+          "topicId": "concepts",
+          "lessonId": "static"
+        }
+      ],
+      "syllabus": [
+        "understand a type as an encoding of constraints on a value",
+        "be aware that all values have types, and that types may be inferred",
+        "understand the concept of a property as an abstract, provable fact about a value, known to the compiler",
+        "understand the `#` notation for referring to members of a type",
+        "understand that a type is conferred on a value by virtue of it being constructed by a template of the same name",
+        "know that the namespaces of types and terms are distinct",
+        "be able to recognize types in Scala source code, just from their context",
+        "understand that Scala's type system is _nominal_ and not _structural_"
+      ]
+    },
+    {
+      "id": "subtyping",
+      "title": "Subtyping",
+      "authorIds": ["jon-pretty"],
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/wfTM_0sxqsA",
+      "prerequisites": [
+        {
+          "reason": "subtyping requires a basic understanding of classes to provide context",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "syllabus": [
+        "understand that a subtype relationship implies a subset of instances _or_ a superset of properties",
+        "know that a supertype relationship is the reverse of a subtype relationship",
+        "understand the _Liskov Substitution Principle_, and the concept of _conformance_",
+        "recognize how the _Principle of Least Power_ applies to types that are declared and used",
+        "see that types can be perceived as algebraic sets of instances or sets of properties"
+      ]
+    },
+    {
+      "id": "casting",
+      "title": "Casting",
+      "authorIds": ["jon-pretty"],
+      "video": "https://www.youtube.com/embed/Z_RUJ9ApUzI",
+      "duration": 14,
+      "syllabus": [
+        "understand how type ascription can safely upcast a value to a less precise type",
+        "be able to downcast values using `asInstanceOf`",
+        "recognize that downcasting circumvents the type system and is inherently unsafe",
+        "know that a `ClassCastException` can be thrown by a downcast",
+        "be aware that downcasting changes a value's static type, not its runtime type"
+      ]
+    },
+    {
+      "id": "hierarchy",
+      "title": "The Type Hierarchy",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "video": "https://www.youtube.com/embed/AYvkAHqHEzk",
+      "syllabus": [
+        "be able to read type hierarchy diagrams as models of the relationships between types",
+        "understand that a type hierarchy diagram can only show a subset of types",
+        "be able to place the types, `Any`, `AnyRef`, `AnyVal`, `Nothing` and `Null` on a Universal type hierarchy diagram",
+        "recognize that every value is either an `AnyRef` or an `AnyVal`",
+        "understand the types `Nothing` and `Null` as subtypes of _everything_"
+      ]
+    },
+    {
+      "id": "generics",
+      "title": "Generic Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "video": "https://www.youtube.com/embed/rqovDkKmGP8",
+      "syllabus": [
+        "understand that types may take parameters, and are called _generic types_",
+        "know that the properties of a generic type may be defined in terms of its type parameter",
+        "be aware that subtyping relationships between generic types depend on variance"
+      ]
+    },
+    {
+      "id": "wildcards",
+      "title": "Wildcard Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 13,
+      "video": "https://www.youtube.com/embed/20RRooLvzRs",
+      "prerequisites": [
+        {
+          "reason": "wildcards often arise as a consequence of type erasure",
+          "topicId": "runtime",
+          "lessonId": "erasure"
+        }
+      ],
+      "syllabus": [
+        "know how to recognize and write wildcard types",
+        "understand wildcard types as generic types whose parameter has not been specified",
+        "understand how different properties of a wildcard type can be interpreted",
+        "recognize the uses of wildcard types as generic types whose parameter is not important, known or consistent"
+      ]
+    },
+    {
+      "id": "unions",
+      "title": "Union types",
+      "authorIds": ["jon-pretty"],
+      "duration": 22,
+      "comingSoon": true,
+      "syllabus": [
+        "understand a union type as a type representing one from a set of alternative types",
+        "equate a union type to a \"sum\" or \"coproduct\" type",
+        "be able to use pattern matching to branch on an instance of a union type",
+        "be aware that union types rely on the erased types of their alternatives being distinct",
+        "recognize that the order and plurality of the alternatives in union type are not significant",
+        "understand the subsumption of types within a union",
+        "be able to simplify union types, where possible",
+        "be able to identify the join of a union type"
+      ]
+    },
+    {
+      "id": "intersections",
+      "title": "Intersection types",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "prerequisites": [
+        {
+          "reason": "intersection types often arise as a consequence of inheritance",
+          "topicId": "templates",
+          "lessonId": "inheritance"
+        }
+      ],
+      "syllabus": [
+        "understand an intersection type as a type representing the union of the properties of its parts",
+        "recognize the similarities between intersection types and product types",
+        "recognize that the order and plurality of the parts of an intersection type are not significant",
+        "understand the subsumption of types within a intersection",
+        "be able to simplify intersection types, where possible"
+      ]
+    },
+    {
+      "id": "aliases",
+      "title": "Type aliases",
+      "authorIds": ["jon-pretty"],
+      "duration": 9,
+      "comingSoon": true,
+      "syllabus": [
+        "recognize a type alias as an alternative name for another type",
+        "be able to define type aliases, including parameterized type aliases",
+        "understand what it means to dealias a type alias"
+      ]
+    },
+    {
+      "id": "members",
+      "title": "Type members",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "prerequisites": [
+        {
+          "reason": "type members are scoped type aliases so we need to first understand scopes",
+          "topicId": "foundations",
+          "lessonId": "scopes"
+        }
+      ],
+      "syllabus": [
+        "recognize a type member as a type alias within a particular scope",
+        "understand when a type member may be dealiased, and when it cannot",
+        "understand how to reference a type with a concrete type member",
+        "know the similarities and differences between type parameters and type members",
+        "understand how to refactor between type members and type parameters, at both the call site and the definition site"
+      ]
+    },
+    {
+      "id": "variance",
+      "title": "Variance",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true,
+      "syllabus": [
+        "understand that variance establishes the subtyping relationship between generic types",
+        "be aware of covariance and invariance",
+        "understand how covariance changes the interpretation of a type parameter as a bound rather than an exact type",
+        "be able to specify a type parameter as covariant",
+        "understand the constraints that covariance places on the usage of type parameters within a template",
+        "be able to recognize whether a particular type parameter of a template may be declared covariant or not"
+      ]
+    },
+    {
+      "id": "contravariance",
+      "title": "Contravariance",
+      "authorIds": ["jon-pretty"],
+      "duration": 21,
+      "comingSoon": true,
+      "syllabus": [
+        "understand the subtyping relationship between different instances of a generic type with a contravariant type parameter",
+        "understand how contravariance changes the interpretation of a type parameter as a bound rather than an exact type",
+        "understand the constraints that contravariance places on the usage of a type parameter within a template",
+        "be able to recognize whether a particular type parameter of a template may be declared contravariant or not"
+    ]
+    },
+    {
+      "id": "stability",
+      "title": "Value Stability",
+      "authorIds": ["jon-pretty"],
+      "duration": 15,
+      "comingSoon": true,
+      "syllabus": [
+        "understand what it means for an identifier to be stable",
+        "know the requirements for an identifier to be considered stable",
+        "know which syntactic constructs introduce stable and unstable identifiers"
+      ]
+    },
+    {
+      "id": "singletons",
+      "title": "Singleton Types",
+      "authorIds": ["jon-pretty"],
+      "duration": 14,
+      "comingSoon": true,
+      "syllabus": [
+        "understand singleton types as types with exactly one instance",
+        "be aware of the requirement that reference singleton types only exist for stable identifiers",
+        "be able to use singleton literal types"
+      ]
+    },
+    {
+      "id": "pathdependent",
+      "title": "Path-dependent types",
+      "authorIds": ["jon-pretty"],
+      "duration": 10,
+      "comingSoon": true,
+      "syllabus": [
+        "understand a path-dependent type as an opaque reference to a type member of a stable value",
+        "be aware of when a path-dependent type may and may not be dealiased to a concrete type"
+      ]
+    },
+    {
+      "id": "projections",
+      "title": "Projection types",
+      "authorIds": ["jon-pretty"],
+      "duration": 11,
+      "comingSoon": true,
+      "syllabus": [
+        "understand projection types as a generalization of path-dependent types whose paths have a common type",
+        "be aware of the limitations of projection type in representing a path-dependent type's properties",
+        "know how to safely downcast a projection type to a path-dependent type",
+        "be able to write a projection type using the `#` operator"
+      ]
+    },
+    {
+      "id": "dependentmethods",
+      "title": "Dependent Methods",
+      "authorIds": ["jon-pretty"],
+      "duration": 19,
+      "comingSoon": true,
+      "syllabus": [
+        "understand a dependent method type as a function type whose return type is dependent on one of its input types",
+        "be able to define a dependent method using a return type that is dependent on a parameter",
+        "understand how an expression involving a dependent method type is typed at a use site",
+        "be able to express the type of a function corresponding to a dependent method"
+      ]
+    },
+    {
+      "id": "polykinded",
+      "title": "Kind Polymorphism",
+      "authorIds": ["jon-pretty"],
+      "duration": 24,
+      "syllabus": []
+    }
+  ]
+}
+]
 }
