@@ -1,6 +1,7 @@
 { "topics": [
 {
   "name": "Collections",
+  "id": "collections",
   "description": "Working with collections of values",
   "lessons": [
     {
@@ -161,6 +162,7 @@
 {
   "name": "Programming Concepts",
   "description": "General concepts of programming and computer science",
+  "id": "concepts",
   "lessons": [
     {
       "id": "static",
@@ -367,6 +369,7 @@
 {
   "name": "Context",
   "description": "Using given context",
+  "id": "context",
   "lessons": [
     {
       "id": "givens",
@@ -513,6 +516,7 @@
 {
   "name": "Data Modeling",
   "description": "How we model real-world data using Scala constructs",
+  "id": "data",
   "lessons": [
     {
       "id": "enums",
@@ -671,6 +675,7 @@
 {
   "name": "For comprehensions",
   "description": "Working with for comprehensions",
+  "id": "fors",
   "lessons": [
     {
       "id": "looping",
@@ -776,6 +781,7 @@
 {
   "name": "Foundations",
   "description": "Fundamental topics for learning to program in Scala",
+  "id": "foundations",
   "lessons": [
     {
       "id": "introduction",
@@ -1051,10 +1057,10 @@
   ]
 }
 ,
-,
 {
   "name": "Metaprogramming",
   "description": "Metaprogramming in Scala",
+  "id": "metaprogramming",
   "lessons": [
     {
       "id": "basics",
@@ -1158,6 +1164,7 @@
 {
   "name": "Pattern Matching",
   "description": "Matching and deconstructing values in Scala with Patterns",
+  "id": "patterns",
   "lessons": [
     {
       "id": "simple",
@@ -1317,6 +1324,7 @@
 {
   "name": "The Runtime",
   "description": "The JVM runtime environment",
+  "id": "runtime",
   "lessons": [
     {
       "id": "jvm",
@@ -1446,6 +1454,7 @@
 {
   "name": "Syntax",
   "description": "The syntax of Scala code",
+  "id": "syntax",
   "lessons": [
     {
       "id": "whitespace",
@@ -1546,6 +1555,7 @@
 {
   "name": "Templates",
   "description": "Classes, traits, objects and their creation",
+  "id": "templates",
   "lessons": [
     {
       "id": "objects",
@@ -1698,6 +1708,7 @@
 {
   "name": "Types",
   "description": "All about Scala's Type System",
+  "id": "types",
   "lessons": [
     {
       "id": "basics",
