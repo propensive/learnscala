@@ -87,8 +87,7 @@ also polykinded.
 
 We can therefore define a typeclass with a polykinded type parameter, such as,
 ```scala
-trait TypeName[T <: AnyKind]:
-  def name: String
+trait TypeName[T <: AnyKind](val name: String)
 ```
 and use it as a context bound on `Z` in the definition of `task`, like so:
 ```scala
@@ -98,10 +97,10 @@ def task[Z <: AnyKind: TypeName]: String =
 
 Now, with a few `TypeName` definitions in scope, such as,
 ```scala
-given TypeName[List] = "List"
-given TypeName[String] = "String"
-given TypeName[Either] = "Either"
-given TypeName[Functor] = "Functor"
+given TypeName[List]("List")
+given TypeName[String]("String")
+given TypeName[Either]("Either")
+given TypeName[Functor]("Functor")
 ```
 it becomes possible to call,
 ```scala
@@ -115,7 +114,10 @@ and produce `"Task for Functor"`, with a consistent method call whose type param
 particular kind.
 
 We could also, of course, try to call `task[Functor[List]]`, but unless a given `TypeName[Functor[List]]` exists
-(or a proper-kinded supertype) in scope, it would not compile.
+(or a proper-kinded supertype) in scope, it would not compile due to the missing contextual value. `Functor` and
+`Functor[List]` are not only different types, but different types with different kinds.
+
+### Mechanism
 
 This works, primarily, because the typeclass `TypeName` serves to eliminate the polykinded type, by providing an
 instance that conforms to a known interface—the `TypeName` trait—and which can facilitate provision of any
